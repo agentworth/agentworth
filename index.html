@@ -24,8 +24,6 @@
   .af-reveal-d1 { animation-delay: .10s; }
   .af-reveal-d2 { animation-delay: .20s; }
   .af-reveal-d3 { animation-delay: .34s; }
-  @keyframes af-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-  .af-float { animation: af-float 6s ease-in-out infinite; }
   @keyframes af-pulse { 0%, 100% { opacity: 0.85; transform: translateX(-50%) scale(1); } 50% { opacity: 1; transform: translateX(-50%) scale(1.04); } }
   .af-pulse { animation: af-pulse 5s ease-in-out infinite; }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
@@ -36,8 +34,6 @@
   .af-btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
   .af-feature { transition: transform 0.25s ease, border-color 0.25s ease; }
   .af-feature:hover { transform: translateY(-6px); border-color: #37506B; }
-
-  #tiltCard, #ghostCard { transition: transform 0.2s ease-out; }
 
   @media (max-width: 680px) {
     .af-pad { padding-left: 24px !important; padding-right: 24px !important; }
@@ -70,49 +66,11 @@
     <p class="af-reveal af-reveal-d1" style="position:relative; margin:24px 0 0; max-width:560px; font-size:18px; line-height:1.6; color:#9BA1AE">agentworth turns your support agent's activity into a number finance trusts, and a record ops can stand behind.</p>
 
     <div class="af-reveal af-reveal-d2" style="position:relative; display:flex; gap:16px; margin-top:36px; flex-wrap:wrap; justify-content:center">
-      <a href="#contact" class="af-btn" style="padding:14px 28px; border-radius:10px; background:var(--signal); color:#06111F; font-weight:600; font-size:15px; box-shadow:0 8px 24px rgba(46,155,255,0.35)">Request early access</a>
+      <a href="#roi-calculator" class="af-btn" style="padding:14px 28px; border-radius:10px; background:var(--signal); color:#06111F; font-weight:600; font-size:15px; box-shadow:0 8px 24px rgba(46,155,255,0.35)">Try the free ROI calculator</a>
       <a href="#how-it-works" class="af-btn" style="padding:14px 28px; border-radius:10px; border:1px solid #2A2E38; color:#F4F5F7; font-weight:600; font-size:15px">See how it works</a>
     </div>
 
-    <div id="tiltWrap" class="af-reveal af-reveal-d3" style="position:relative; margin-top:88px; width:100%; max-width:880px; perspective:1800px">
-      <div style="position:absolute; inset:-40px; background:radial-gradient(closest-side, rgba(46,155,255,0.24), rgba(46,155,255,0) 75%); filter:blur(4px)"></div>
-      <div class="af-float" style="position:relative">
-        <div id="ghostCard" style="position:absolute; top:26px; left:50%; transform:translateX(-50%) rotateX(10deg) rotateY(-18deg); transform-style:preserve-3d; width:92%; height:100%; border-radius:20px; border:1px solid #20232B; background:#13151A; opacity:0.55; filter:blur(0.5px)"></div>
-        <div id="tiltCard" style="position:relative; transform:rotateX(10deg) rotateY(-12deg); transform-style:preserve-3d; border-radius:20px; border:1px solid #2B2F3A; background:linear-gradient(165deg,#181B23,#101217); box-shadow:0 60px 120px -30px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.04) inset, 0 1px 0 rgba(255,255,255,0.08) inset; padding:28px; text-align:left">
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:22px; flex-wrap:wrap; gap:10px">
-            <span style="font-size:13px; color:#6B7280">Sample report &middot; Support agent</span>
-            <span style="font-size:12px; color:#6FCF97; background:rgba(111,207,151,0.12); padding:4px 10px; border-radius:999px">Synced 2m ago</span>
-          </div>
-          <div class="af-grid-3" style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px">
-            <div style="background:#13151A; border:1px solid #21242D; border-radius:12px; padding:18px">
-              <div style="font-size:13px; color:#8A8F99">Resolved without a human</div>
-              <div style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:600; margin-top:8px">1,284</div>
-            </div>
-            <div style="background:#13151A; border:1px solid #21242D; border-radius:12px; padding:18px">
-              <div style="font-size:13px; color:#8A8F99">Cost saved this month</div>
-              <div style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:600; margin-top:8px; color:var(--signal)">$18,420</div>
-            </div>
-            <div style="background:#13151A; border:1px solid #21242D; border-radius:12px; padding:18px">
-              <div style="font-size:13px; color:#8A8F99">Flagged for review</div>
-              <div style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:600; margin-top:8px">6</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="af-pad" style="padding:100px 48px; display:flex; justify-content:center">
-    <div style="display:flex; flex-wrap:wrap; gap:64px; max-width:1040px; width:100%">
-      <div style="flex:1 1 420px; min-width:0">
-        <h2 style="font-family:'Outfit',sans-serif; font-weight:600; font-size:32px; margin:0 0 20px; letter-spacing:-0.01em">You bought an AI employee. Nobody can tell you if it's working.</h2>
-        <p style="font-size:16px; line-height:1.7; color:#9BA1AE; margin:0 0 16px">Support agents are answering tickets around the clock, but when the board asks whether it's paying off, most ops and finance teams are guessing: a spreadsheet here, a vendor dashboard there, no shared number.</p>
-        <p style="font-size:16px; line-height:1.7; color:#9BA1AE; margin:0">agentworth watches what your agent actually does and turns it into one number everyone trusts, plus a record of what happened when something went wrong.</p>
-      </div>
-      <div style="flex:1 1 320px; min-width:0; display:flex; align-items:center">
-        <blockquote style="margin:0; padding:28px; border-left:2px solid var(--signal); background:#111319; border-radius:0 14px 14px 0; font-size:17px; line-height:1.6; color:#D6D9DE; font-style:italic">"Did the AI pay off this quarter?" shouldn't be a question your team dreads.</blockquote>
-      </div>
-    </div>
+    <p class="af-reveal af-reveal-d3" style="position:relative; margin:56px 0 0; max-width:640px; font-size:16px; line-height:1.7; color:#8A8F99">Support agents answer tickets around the clock, but when the board asks whether it is paying off, most teams are guessing: a spreadsheet here, a vendor dashboard there, no shared number. agentworth watches what your agent actually does and turns it into one number everyone trusts.</p>
   </section>
 
   <section id="how-it-works" class="af-pad" style="padding:100px 48px; display:flex; justify-content:center; background:#0E0F13; border-top:1px solid #181B22; border-bottom:1px solid #181B22">
@@ -251,25 +209,6 @@
 </div>
 
 <script>
-  // 3D tilt that follows the cursor over the dashboard card
-  var tiltWrap = document.getElementById('tiltWrap');
-  var tiltCard = document.getElementById('tiltCard');
-  var ghostCard = document.getElementById('ghostCard');
-
-  tiltWrap.addEventListener('mousemove', function (e) {
-    var rect = tiltWrap.getBoundingClientRect();
-    var relX = (e.clientX - rect.left) / rect.width - 0.5;
-    var relY = (e.clientY - rect.top) / rect.height - 0.5;
-    var tiltX = 10 - relY * 16;
-    var tiltY = -12 + relX * 24;
-    tiltCard.style.transform = 'rotateX(' + tiltX + 'deg) rotateY(' + tiltY + 'deg)';
-    ghostCard.style.transform = 'translateX(-50%) rotateX(' + tiltX + 'deg) rotateY(' + tiltY + 'deg)';
-  });
-  tiltWrap.addEventListener('mouseleave', function () {
-    tiltCard.style.transform = 'rotateX(10deg) rotateY(-12deg)';
-    ghostCard.style.transform = 'translateX(-50%) rotateX(10deg) rotateY(-18deg)';
-  });
-
   // ROI calculator -> live estimate as the visitor types
   function fmtUSD(n) {
     n = Math.round(n);
