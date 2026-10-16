@@ -1,0 +1,7 @@
+# agentworth X Reply Log
+# Tracks tweets and authors already replied to, so the reply automation
+# never double replies to the same tweet or targets the same author
+# repeatedly in a short window.
+#
+# Format: DATE | TWEET_URL | AUTHOR_HANDLE | TOPIC
+# ---------------------------------------------------------------
