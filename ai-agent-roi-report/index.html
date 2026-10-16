@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 2026 State of AI Agent ROI — agentworth</title>
+<meta name="description" content="Seven numbers that show the gap between how much enterprises are spending on AI agents and how little of it they can actually prove.">
+<meta property="og:title" content="The 2026 State of AI Agent ROI">
+<meta property="og:description" content="Seven numbers that show the gap between AI agent spending and proven ROI.">
+<meta property="og:image" content="https://agentworth.cloud/ai-agent-roi-report/og-card.png">
+<meta name="twitter:image" content="https://agentworth.cloud/ai-agent-roi-report/og-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --signal: #2E9BFF; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0B0C10; color: #F4F5F7; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  input::placeholder { color: #6B7280; }
+  input:focus, button:focus-visible, a:focus-visible { outline: 2px solid #2E9BFF; outline-offset: 2px; }
+  .af-nav a { transition: color 0.2s ease; }
+  .af-nav a:hover { color: #F4F5F7; }
+  .af-btn { transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease; display: inline-block; cursor: pointer; }
+  .af-btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
+  .stat-card { background:linear-gradient(165deg,#15181F,#0F1115); border:1px solid #21242D; border-radius:18px; padding:30px; display:flex; flex-direction:column; gap:10px; }
+  .stat-number { font-family:'Outfit',sans-serif; font-weight:700; font-size:44px; line-height:1; color:var(--signal); }
+  .stat-claim { font-size:16px; line-height:1.55; color:#E5E7EB; margin:0; }
+  .stat-source { font-size:12.5px; color:#6B7280; margin-top:4px; }
+  .stat-source a { color:#8FB8E0; text-decoration:underline; }
+  @media (max-width: 680px) {
+    .af-pad { padding-left: 24px !important; padding-right: 24px !important; }
+    .af-grid-2 { grid-template-columns: 1fr !important; }
+    .af-nav { gap: 16px !important; }
+    .af-nav-cta { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div style="position:relative; width:100%; min-height:100vh; background:#0B0C10; overflow:hidden">
+
+  <header class="af-pad" style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:20px 48px; backdrop-filter:blur(12px); background:rgba(11,12,16,0.72); border-bottom:1px solid #1E2129">
+    <a href="/"><img src="/logo.png" alt="agentworth" style="height:22px; width:auto; display:block"></a>
+    <nav class="af-nav" style="display:flex; align-items:center; gap:36px; font-size:14px; color:#B6BBC4; flex-wrap:wrap">
+      <a href="/roi-calculator/">ROI calculator</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact" class="af-nav-cta" style="padding:10px 20px; border-radius:999px; background:var(--signal); color:#06111F; font-weight:600">Get in touch</a>
+    </nav>
+  </header>
+
+  <section class="af-pad" style="padding:100px 48px 50px; display:flex; flex-direction:column; align-items:center; text-align:center">
+    <div style="font-size:13px; color:var(--signal); font-weight:600; letter-spacing:0.04em; text-transform:uppercase; margin-bottom:18px">Benchmark report</div>
+    <h1 style="margin:0; font-family:'Outfit',sans-serif; font-weight:600; font-size:clamp(32px,5.5vw,54px); line-height:1.12; letter-spacing:-0.02em; max-width:780px">The 2026 state of AI agent ROI</h1>
+    <p style="margin:22px 0 0; max-width:620px; font-size:17px; line-height:1.65; color:#9BA1AE">Seven numbers, pulled from public research, that show the gap between how much enterprises are spending on AI agents and how little of it anyone can actually prove. No email required to read it.</p>
+  </section>
+
+  <section class="af-pad" style="padding:30px 48px 40px; display:flex; justify-content:center">
+    <div class="af-grid-2" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; max-width:1040px; width:100%">
+
+      <div class="stat-card">
+        <div class="stat-number">95%</div>
+        <p class="stat-claim">of enterprise generative AI pilots fail to deliver a measurable financial return, according to MIT's GenAI Divide study.</p>
+        <div class="stat-source">MIT, The GenAI Divide, State of AI in Business 2025. <a href="https://www.legal.io/articles/5719519/MIT-Report-Finds-95-of-AI-Pilots-Fail-to-Deliver-ROI-Exposing-GenAI-Divide" target="_blank" rel="noopener">Source</a></div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-number">82%</div>
+        <p class="stat-claim">of firms say they cannot prove their AI actually works, even while they keep scaling it across the business.</p>
+        <div class="stat-source">UC Strategies, 2026. <a href="https://ucstrategies.com/news/82-of-firms-cant-prove-their-ai-works-but-theyre-scaling-it-anyway/" target="_blank" rel="noopener">Source</a></div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-number">18x</div>
+        <p class="stat-claim">more AI agents are running inside enterprises than a year ago, but most of those companies still cannot show a dollar of return from them.</p>
+        <div class="stat-source">beam.ai, Agentic Insights, 2026. <a href="https://beam.ai/agentic-insights/enterprises-have-18x-more-ai-agents-than-last-year-most-cant-show-a-dollar-of-roi" target="_blank" rel="noopener">Source</a></div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-number">~25%</div>
+        <p class="stat-claim">of AI customer service use cases are actually producing measurable ROI, meaning roughly three out of four are not.</p>
+        <div class="stat-source">Customer Experience Dive, 2026. <a href="https://www.customerexperiencedive.com/news/only-one-quarter-of-ai-customer-service-use-cases-produce-roi/827951/" target="_blank" rel="noopener">Source</a></div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-number">84%</div>
+        <p class="stat-claim">of CIOs say their own IT teams cannot keep pace with how fast AI agents are being rolled out across the business.</p>
+        <div class="stat-source">Digital Today, 2026. <a href="https://www.digitaltoday.co.kr/en/view/114254/global-cios-84-percent-say-it-teams-cannot-keep-pace-with-ai-agent-rollout" target="_blank" rel="noopener">Source</a></div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-number">$2.59T</div>
+        <p class="stat-claim">is what Gartner expects global AI spending to reach in 2026, a 47 percent jump over 2025, with agents taking a growing share of it.</p>
+        <div class="stat-source">Gartner, via CIO Dive, May 2026. <a href="https://www.ciodive.com/news/global-AI-spending-2026/820656/" target="_blank" rel="noopener">Source</a></div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-number">14%</div>
+        <p class="stat-claim">of CFOs say they completely trust AI to deliver accurate financial data on its own, without a human checking it.</p>
+        <div class="stat-source">Wakefield Research, survey of 100 mid market CFOs, February 2026. <a href="https://v2.techeconomy.ng/only-14-of-cfos-trust-ai-to-deliver-accurate-accounting-data" target="_blank" rel="noopener">Source</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="af-pad" style="padding:40px 48px 120px; display:flex; justify-content:center">
+    <div style="max-width:720px; width:100%">
+      <h2 style="font-family:'Outfit',sans-serif; font-weight:600; font-size:26px; margin:0 0 18px; letter-spacing:-0.01em">What this actually means</h2>
+      <p style="font-size:16px; line-height:1.75; color:#9BA1AE; margin:0 0 16px">Put these seven numbers side by side and one pattern shows up clearly. Spending on AI agents is accelerating fast, trillions of dollars fast, while the ability to prove any of it is working has not kept up at all. Most companies are not measuring badly, they are mostly not measuring at all, and the handful of CFOs who do trust an AI generated number can be counted in the teens, not the majority.</p>
+      <p style="font-size:16px; line-height:1.75; color:#9BA1AE; margin:0 0 16px">That gap is exactly where agentworth lives. We connect to the agent platform you already run, track every resolution as it actually happens, and turn that into one number with an audit trail behind it, the kind of number a CFO in that 14 percent, or the 86 percent still skeptical, could actually sign off on.</p>
+      <p style="font-size:16px; line-height:1.75; color:#9BA1AE; margin:0 0 32px">Want a rough version of your own number first? Try the <a href="/roi-calculator/" style="color:var(--signal); text-decoration:underline">free ROI calculator</a>. Want the verified version? Tell us a bit about your setup below.</p>
+
+      <form id="reportForm" style="display:flex; flex-direction:column; gap:16px; text-align:left; background:linear-gradient(165deg,#15181F,#0F1115); border:1px solid #21242D; border-radius:18px; padding:30px">
+        <div>
+          <label for="email" style="display:block; font-size:13px; color:#9BA1AE; margin-bottom:6px">Work email</label>
+          <input id="email" type="email" placeholder="you@company.com" style="width:100%; padding:13px 16px; border-radius:10px; border:1px solid #2A2E38; background:#13151A; color:#F4F5F7; font-size:15px; font-family:'Plus Jakarta Sans',sans-serif">
+        </div>
+        <button type="submit" class="af-btn" style="padding:14px 28px; border-radius:10px; border:none; background:var(--signal); color:#06111F; font-weight:600; font-size:15px; cursor:pointer; box-shadow:0 8px 24px rgba(46,155,255,0.35)">Get future reports first</button>
+        <p style="margin:0; font-size:12.5px; color:#6B7280">Opens your email client, addressed to hello@agentworth.cloud. No spam, just the next report when it is out.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="af-pad" style="padding:40px 48px; display:flex; align-items:center; justify-content:space-between; border-top:1px solid #181B22; flex-wrap:wrap; gap:16px">
+    <a href="/"><img src="/logo.png" alt="agentworth" style="height:16px; width:auto; display:block; opacity:0.8"></a>
+    <span style="font-size:13px; color:#6B7280">&copy; 2026 agentworth. Built for teams who have to answer for their AI.</span>
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('reportForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = document.getElementById('email').value;
+    var subject = encodeURIComponent('Send me future AI agent ROI reports');
+    var body = encodeURIComponent('Email: ' + email + '\n\nPlease add me to the list for future agentworth benchmark reports.');
+    window.location.href = 'mailto:hello@agentworth.cloud?subject=' + subject + '&body=' + body;
+  });
+</script>
+
+</body>
+</html>
