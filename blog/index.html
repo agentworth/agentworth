@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog — AgentWorth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --signal: #2E9BFF; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0B0C10; color: #F4F5F7; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  .af-nav a { transition: color 0.2s ease; }
+  .af-nav a:hover { color: #F4F5F7; }
+  .post-card { transition: transform 0.2s ease, border-color 0.2s ease; display: block; }
+  .post-card:hover { transform: translateY(-4px); border-color: #37506B; }
+  @media (max-width: 680px) {
+    .af-pad { padding-left: 24px !important; padding-right: 24px !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="af-pad" style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:20px 48px; backdrop-filter:blur(12px); background:rgba(11,12,16,0.72); border-bottom:1px solid #1E2129">
+  <a href="/"><img src="/logo.png" alt="AgentWorth" style="height:22px; width:auto; display:block"></a>
+  <nav class="af-nav" style="display:flex; align-items:center; gap:36px; font-size:14px; color:#B6BBC4; flex-wrap:wrap">
+    <a href="/#how-it-works">How it works</a>
+    <a href="/#features">What it tracks</a>
+    <a href="/blog/" style="color:#F4F5F7">Blog</a>
+    <a href="/#contact" style="padding:10px 20px; border-radius:999px; background:var(--signal); color:#06111F; font-weight:600">Get in touch</a>
+  </nav>
+</header>
+
+<section class="af-pad" style="padding:80px 48px 40px; max-width:800px; margin:0 auto">
+  <h1 style="font-family:'Outfit',sans-serif; font-weight:600; font-size:clamp(32px,5vw,48px); margin:0 0 16px; letter-spacing:-0.02em">The AgentWorth blog</h1>
+  <p style="font-size:17px; line-height:1.6; color:#9BA1AE; margin:0">Notes on AI agent ROI, support automation, and proving your AI pays for itself.</p>
+</section>
+
+<section class="af-pad" style="padding:20px 48px 120px; max-width:800px; margin:0 auto">
+  <div id="post-list" style="display:flex; flex-direction:column; gap:4px">
+<!-- POSTS_START -->
+    <a class="post-card" href="/blog/posts/welcome-to-the-agentworth-blog.html" style="padding:28px 0; border-bottom:1px solid #1E2129">
+      <div style="font-size:13px; color:#6B7280; margin-bottom:8px">October 17, 2026</div>
+      <h2 style="margin:0 0 8px; font-family:'Outfit',sans-serif; font-size:22px; font-weight:600">Welcome to the AgentWorth blog</h2>
+      <p style="margin:0; font-size:15px; line-height:1.6; color:#9BA1AE">Why we're writing about AI agent ROI, and what to expect here.</p>
+    </a>
+<!-- POSTS_END -->
+  </div>
+</section>
+
+<footer class="af-pad" style="padding:40px 48px; display:flex; align-items:center; justify-content:space-between; border-top:1px solid #181B22; flex-wrap:wrap; gap:16px; max-width:800px; margin:0 auto">
+  <a href="/"><img src="/logo.png" alt="AgentWorth" style="height:16px; width:auto; display:block; opacity:0.8"></a>
+  <span style="font-size:13px; color:#6B7280">&copy; 2026 AgentWorth. Built for teams who have to answer for their AI.</span>
+</footer>
+
+</body>
+</html>

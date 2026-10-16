@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgentWorth — prove your AI agent's ROI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --signal: #2E9BFF; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0B0C10; color: #F4F5F7; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: rgba(46,155,255,0.35); }
+  input::placeholder, textarea::placeholder { color: #6B7280; }
+  input:focus, textarea:focus, button:focus-visible, a:focus-visible { outline: 2px solid #2E9BFF; outline-offset: 2px; }
+
+  @keyframes af-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  .af-reveal { animation: af-rise 0.8s cubic-bezier(.16,.84,.44,1) both; }
+  .af-reveal-d1 { animation-delay: .10s; }
+  .af-reveal-d2 { animation-delay: .20s; }
+  .af-reveal-d3 { animation-delay: .34s; }
+  @keyframes af-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .af-float { animation: af-float 6s ease-in-out infinite; }
+  @keyframes af-pulse { 0%, 100% { opacity: 0.85; transform: translateX(-50%) scale(1); } 50% { opacity: 1; transform: translateX(-50%) scale(1.04); } }
+  .af-pulse { animation: af-pulse 5s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+  .af-nav a { transition: color 0.2s ease; }
+  .af-nav a:hover { color: #F4F5F7; }
+  .af-btn { transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease; display: inline-block; }
+  .af-btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
+  .af-feature { transition: transform 0.25s ease, border-color 0.25s ease; }
+  .af-feature:hover { transform: translateY(-6px); border-color: #37506B; }
+
+  #tiltCard, #ghostCard { transition: transform 0.2s ease-out; }
+
+  @media (max-width: 680px) {
+    .af-pad { padding-left: 24px !important; padding-right: 24px !important; }
+    .af-grid-3 { grid-template-columns: 1fr !important; }
+    .af-grid-2 { grid-template-columns: 1fr !important; }
+    .af-nav { gap: 16px !important; }
+    .af-nav-cta { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div style="position:relative; width:100%; min-height:100vh; background:#0B0C10; overflow:hidden">
+
+  <header class="af-pad" style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:20px 48px; backdrop-filter:blur(12px); background:rgba(11,12,16,0.72); border-bottom:1px solid #1E2129">
+    <img src="logo.png" alt="AgentWorth" style="height:22px; width:auto; display:block">
+    <nav class="af-nav" style="display:flex; align-items:center; gap:36px; font-size:14px; color:#B6BBC4; flex-wrap:wrap">
+      <a href="#how-it-works">How it works</a>
+      <a href="#features">What it tracks</a>
+      <a href="/blog/">Blog</a>
+      <a href="#contact" class="af-nav-cta" style="padding:10px 20px; border-radius:999px; background:var(--signal); color:#06111F; font-weight:600">Get in touch</a>
+    </nav>
+  </header>
+
+  <section class="af-pad" style="position:relative; padding:120px 48px 80px; display:flex; flex-direction:column; align-items:center; text-align:center">
+    <div class="af-pulse" style="position:absolute; top:-120px; left:50%; width:900px; height:560px; background:radial-gradient(closest-side, rgba(46,155,255,0.30), rgba(46,155,255,0) 70%); filter:blur(10px); pointer-events:none"></div>
+
+    <h1 class="af-reveal" style="position:relative; margin:0; font-family:'Outfit',sans-serif; font-weight:600; font-size:clamp(36px,6vw,66px); line-height:1.08; letter-spacing:-0.02em; max-width:820px">Prove your AI agent is worth what you pay for it</h1>
+    <p class="af-reveal af-reveal-d1" style="position:relative; margin:24px 0 0; max-width:560px; font-size:18px; line-height:1.6; color:#9BA1AE">AgentWorth turns your support agent's activity into a number finance trusts, and a record ops can stand behind.</p>
+
+    <div class="af-reveal af-reveal-d2" style="position:relative; display:flex; gap:16px; margin-top:36px; flex-wrap:wrap; justify-content:center">
+      <a href="#contact" class="af-btn" style="padding:14px 28px; border-radius:10px; background:var(--signal); color:#06111F; font-weight:600; font-size:15px; box-shadow:0 8px 24px rgba(46,155,255,0.35)">Request early access</a>
+      <a href="#how-it-works" class="af-btn" style="padding:14px 28px; border-radius:10px; border:1px solid #2A2E38; color:#F4F5F7; font-weight:600; font-size:15px">See how it works</a>
+    </div>
+
+    <div id="tiltWrap" class="af-reveal af-reveal-d3" style="position:relative; margin-top:88px; width:100%; max-width:880px; perspective:1800px">
+      <div style="position:absolute; inset:-40px; background:radial-gradient(closest-side, rgba(46,155,255,0.24), rgba(46,155,255,0) 75%); filter:blur(4px)"></div>
+      <div class="af-float" style="position:relative">
+        <div id="ghostCard" style="position:absolute; top:26px; left:50%; transform:translateX(-50%) rotateX(10deg) rotateY(-18deg); transform-style:preserve-3d; width:92%; height:100%; border-radius:20px; border:1px solid #20232B; background:#13151A; opacity:0.55; filter:blur(0.5px)"></div>
+        <div id="tiltCard" style="position:relative; transform:rotateX(10deg) rotateY(-12deg); transform-style:preserve-3d; border-radius:20px; border:1px solid #2B2F3A; background:linear-gradient(165deg,#181B23,#101217); box-shadow:0 60px 120px -30px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.04) inset, 0 1px 0 rgba(255,255,255,0.08) inset; padding:28px; text-align:left">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:22px; flex-wrap:wrap; gap:10px">
+            <span style="font-size:13px; color:#6B7280">Sample report &middot; Support agent</span>
+            <span style="font-size:12px; color:#6FCF97; background:rgba(111,207,151,0.12); padding:4px 10px; border-radius:999px">Synced 2m ago</span>
+          </div>
+          <div class="af-grid-3" style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px">
+            <div style="background:#13151A; border:1px solid #21242D; border-radius:12px; padding:18px">
+              <div style="font-size:13px; color:#8A8F99">Resolved without a human</div>
+              <div style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:600; margin-top:8px">1,284</div>
+            </div>
+            <div style="background:#13151A; border:1px solid #21242D; border-radius:12px; padding:18px">
+              <div style="font-size:13px; color:#8A8F99">Cost saved this month</div>
+              <div style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:600; margin-top:8px; color:var(--signal)">$18,420</div>
+            </div>
+            <div style="background:#13151A; border:1px solid #21242D; border-radius:12px; padding:18px">
+              <div style="font-size:13px; color:#8A8F99">Flagged for review</div>
+              <div style="font-family:'Outfit',sans-serif; font-size:28px; font-weight:600; margin-top:8px">6</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="af-pad" style="padding:100px 48px; display:flex; justify-content:center">
+    <div style="display:flex; flex-wrap:wrap; gap:64px; max-width:1040px; width:100%">
+      <div style="flex:1 1 420px; min-width:0">
+        <h2 style="font-family:'Outfit',sans-serif; font-weight:600; font-size:32px; margin:0 0 20px; letter-spacing:-0.01em">You bought an AI employee. Nobody can tell you if it's working.</h2>
+        <p style="font-size:16px; line-height:1.7; color:#9BA1AE; margin:0 0 16px">Support agents are answering tickets around the clock, but when the board asks whether it's paying off, most ops and finance teams are guessing: a spreadsheet here, a vendor dashboard there, no shared number.</p>
+        <p style="font-size:16px; line-height:1.7; color:#9BA1AE; margin:0">AgentWorth watches what your agent actually does and turns it into one number everyone trusts, plus a record of what happened when something went wrong.</p>
+      </div>
+      <div style="flex:1 1 320px; min-width:0; display:flex; align-items:center">
+        <blockquote style="margin:0; padding:28px; border-left:2px solid var(--signal); background:#111319; border-radius:0 14px 14px 0; font-size:17px; line-height:1.6; color:#D6D9DE; font-style:italic">"Did the AI pay off this quarter?" shouldn't be a question your team dreads.</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="af-pad" style="padding:100px 48px; display:flex; justify-content:center; background:#0E0F13; border-top:1px solid #181B22; border-bottom:1px solid #181B22">
+    <div style="max-width:1040px; width:100%">
+      <h2 style="font-family:'Outfit',sans-serif; font-weight:600; font-size:32px; margin:0 0 48px; letter-spacing:-0.01em">How it works</h2>
+      <div class="af-grid-3" style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:40px">
+        <div>
+          <div style="font-family:'Outfit',sans-serif; font-size:15px; color:var(--signal); font-weight:600; margin-bottom:14px">1</div>
+          <h3 style="margin:0 0 10px; font-size:19px; font-weight:600">Connect your agent platform</h3>
+          <p style="margin:0; font-size:15px; line-height:1.65; color:#9BA1AE">Link the support agent you already run. No migration, nothing to switch.</p>
+        </div>
+        <div>
+          <div style="font-family:'Outfit',sans-serif; font-size:15px; color:var(--signal); font-weight:600; margin-bottom:14px">2</div>
+          <h3 style="margin:0 0 10px; font-size:19px; font-weight:600">We track every resolution</h3>
+          <p style="margin:0; font-size:15px; line-height:1.65; color:#9BA1AE">Every ticket the agent touches is logged, scored, and tied to a cost saved or a mistake caught.</p>
+        </div>
+        <div>
+          <div style="font-family:'Outfit',sans-serif; font-size:15px; color:var(--signal); font-weight:600; margin-bottom:14px">3</div>
+          <h3 style="margin:0 0 10px; font-size:19px; font-weight:600">You get a number for the board</h3>
+          <p style="margin:0; font-size:15px; line-height:1.65; color:#9BA1AE">One weekly report: what it saved, what it got wrong, and why you can trust it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="af-pad" style="padding:100px 48px; display:flex; justify-content:center">
+    <div class="af-grid-2" style="max-width:1040px; width:100%; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px">
+      <div class="af-feature" style="background:linear-gradient(165deg,#15181F,#0F1115); border:1px solid #21242D; border-radius:18px; padding:32px">
+        <h3 style="margin:0 0 12px; font-family:'Outfit',sans-serif; font-size:21px; font-weight:600">ROI attribution</h3>
+        <p style="margin:0; font-size:15px; line-height:1.7; color:#9BA1AE">Every resolved ticket is tied to a real dollar figure, staff hours saved, tickets deflected, so the number in your board deck has a receipt behind it.</p>
+      </div>
+      <div class="af-feature" style="background:linear-gradient(165deg,#15181F,#0F1115); border:1px solid #21242D; border-radius:18px; padding:32px">
+        <h3 style="margin:0 0 12px; font-family:'Outfit',sans-serif; font-size:21px; font-weight:600">Trust &amp; audit log</h3>
+        <p style="margin:0; font-size:15px; line-height:1.7; color:#9BA1AE">Every agent decision is reviewable after the fact, with anomalies flagged automatically, so compliance has a record, not a guess.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="af-pad" style="padding:110px 48px 130px; display:flex; justify-content:center; background:#0E0F13; border-top:1px solid #181B22">
+    <div style="max-width:640px; width:100%; text-align:center">
+      <h2 style="font-family:'Outfit',sans-serif; font-weight:600; font-size:32px; margin:0 0 14px; letter-spacing:-0.01em">Let's talk</h2>
+      <p style="margin:0 0 40px; font-size:16px; line-height:1.6; color:#9BA1AE">Running a support agent and want to know what it's really worth? Tell us a bit about your setup and we'll get back to you.</p>
+
+      <form id="inquiryForm" style="display:flex; flex-direction:column; gap:16px; text-align:left">
+        <div>
+          <label for="company" style="display:block; font-size:13px; color:#9BA1AE; margin-bottom:6px">Company name</label>
+          <input id="company" type="text" placeholder="Acme Inc." style="width:100%; padding:13px 16px; border-radius:10px; border:1px solid #2A2E38; background:#13151A; color:#F4F5F7; font-size:15px; font-family:'Plus Jakarta Sans',sans-serif">
+        </div>
+        <div>
+          <label for="email" style="display:block; font-size:13px; color:#9BA1AE; margin-bottom:6px">Work email</label>
+          <input id="email" type="email" placeholder="you@company.com" style="width:100%; padding:13px 16px; border-radius:10px; border:1px solid #2A2E38; background:#13151A; color:#F4F5F7; font-size:15px; font-family:'Plus Jakarta Sans',sans-serif">
+        </div>
+        <div>
+          <label for="message" style="display:block; font-size:13px; color:#9BA1AE; margin-bottom:6px">What are you using today?</label>
+          <textarea id="message" rows="4" placeholder="e.g. Agentforce for support, no ROI reporting yet" style="width:100%; padding:13px 16px; border-radius:10px; border:1px solid #2A2E38; background:#13151A; color:#F4F5F7; font-size:15px; font-family:'Plus Jakarta Sans',sans-serif; resize:vertical"></textarea>
+        </div>
+        <button type="submit" class="af-btn" style="margin-top:6px; padding:14px 28px; border-radius:10px; border:none; background:var(--signal); color:#06111F; font-weight:600; font-size:15px; cursor:pointer; box-shadow:0 8px 24px rgba(46,155,255,0.35)">Send inquiry</button>
+        <p style="margin:4px 0 0; font-size:12.5px; color:#6B7280">Opens your email client, addressed to hello@agentworth.cloud.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="af-pad" style="padding:40px 48px; display:flex; align-items:center; justify-content:space-between; border-top:1px solid #181B22; flex-wrap:wrap; gap:16px">
+    <img src="logo.png" alt="AgentWorth" style="height:16px; width:auto; display:block; opacity:0.8">
+    <span style="font-size:13px; color:#6B7280">&copy; 2026 AgentWorth. Built for teams who have to answer for their AI.</span>
+  </footer>
+
+</div>
+
+<script>
+  // 3D tilt that follows the cursor over the dashboard card
+  var tiltWrap = document.getElementById('tiltWrap');
+  var tiltCard = document.getElementById('tiltCard');
+  var ghostCard = document.getElementById('ghostCard');
+
+  tiltWrap.addEventListener('mousemove', function (e) {
+    var rect = tiltWrap.getBoundingClientRect();
+    var relX = (e.clientX - rect.left) / rect.width - 0.5;
+    var relY = (e.clientY - rect.top) / rect.height - 0.5;
+    var tiltX = 10 - relY * 16;
+    var tiltY = -12 + relX * 24;
+    tiltCard.style.transform = 'rotateX(' + tiltX + 'deg) rotateY(' + tiltY + 'deg)';
+    ghostCard.style.transform = 'translateX(-50%) rotateX(' + tiltX + 'deg) rotateY(' + tiltY + 'deg)';
+  });
+  tiltWrap.addEventListener('mouseleave', function () {
+    tiltCard.style.transform = 'rotateX(10deg) rotateY(-12deg)';
+    ghostCard.style.transform = 'translateX(-50%) rotateX(10deg) rotateY(-18deg)';
+  });
+
+  // Contact form -> opens the visitor's email client, pre-filled
+  document.getElementById('inquiryForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var company = document.getElementById('company').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+    var subject = encodeURIComponent('Inquiry from ' + (company || 'a company'));
+    var body = encodeURIComponent('Company: ' + company + '\nEmail: ' + email + '\n\n' + message);
+    window.location.href = 'mailto:hello@agentworth.cloud?subject=' + subject + '&body=' + body;
+  });
+</script>
+
+</body>
+</html>
