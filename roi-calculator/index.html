@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Agent ROI Calculator — agentworth</title>
+<meta name="description" content="Estimate what your AI agent is actually saving you each month, in a real dollar number, in under a minute.">
+<meta property="og:title" content="AI Agent ROI Calculator">
+<meta property="og:description" content="Estimate what your AI agent is actually saving you each month, in a real dollar number.">
+<meta property="og:image" content="https://agentworth.cloud/roi-calculator/og-card.png">
+<meta name="twitter:image" content="https://agentworth.cloud/roi-calculator/og-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --signal: #2E9BFF; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0B0C10; color: #F4F5F7; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  input::placeholder { color: #6B7280; }
+  input:focus, button:focus-visible, a:focus-visible { outline: 2px solid #2E9BFF; outline-offset: 2px; }
+  .af-nav a { transition: color 0.2s ease; }
+  .af-nav a:hover { color: #F4F5F7; }
+  .af-btn { transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease; display: inline-block; cursor: pointer; }
+  .af-btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
+  .af-field label { display:block; font-size:13px; color:#9BA1AE; margin-bottom:6px; }
+  .af-field input { width:100%; padding:13px 16px; border-radius:10px; border:1px solid #2A2E38; background:#13151A; color:#F4F5F7; font-size:15px; font-family:'Plus Jakarta Sans',sans-serif; }
+  .af-field .af-hint { font-size:12px; color:#6B7280; margin-top:5px; }
+  .af-stat { background:#13151A; border:1px solid #21242D; border-radius:12px; padding:20px; }
+  .af-stat .af-stat-label { font-size:13px; color:#8A8F99; }
+  .af-stat .af-stat-value { font-family:'Outfit',sans-serif; font-size:30px; font-weight:600; margin-top:8px; }
+  @keyframes af-pulse { 0%, 100% { opacity: 0.85; transform: translateX(-50%) scale(1); } 50% { opacity: 1; transform: translateX(-50%) scale(1.04); } }
+  .af-pulse { animation: af-pulse 5s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+  @media (max-width: 680px) {
+    .af-pad { padding-left: 24px !important; padding-right: 24px !important; }
+    .af-grid-2 { grid-template-columns: 1fr !important; }
+    .af-grid-3 { grid-template-columns: 1fr !important; }
+    .af-nav { gap: 16px !important; }
+    .af-nav-cta { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div style="position:relative; width:100%; min-height:100vh; background:#0B0C10; overflow:hidden">
+
+  <header class="af-pad" style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:20px 48px; backdrop-filter:blur(12px); background:rgba(11,12,16,0.72); border-bottom:1px solid #1E2129">
+    <a href="/"><img src="/logo.png" alt="agentworth" style="height:22px; width:auto; display:block"></a>
+    <nav class="af-nav" style="display:flex; align-items:center; gap:36px; font-size:14px; color:#B6BBC4; flex-wrap:wrap">
+      <a href="/#how-it-works">How it works</a>
+      <a href="/#features">What it tracks</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact" class="af-nav-cta" style="padding:10px 20px; border-radius:999px; background:var(--signal); color:#06111F; font-weight:600">Get in touch</a>
+    </nav>
+  </header>
+
+  <section class="af-pad" style="position:relative; padding:90px 48px 20px; display:flex; flex-direction:column; align-items:center; text-align:center">
+    <div class="af-pulse" style="position:absolute; top:-140px; left:50%; width:800px; height:480px; background:radial-gradient(closest-side, rgba(46,155,255,0.28), rgba(46,155,255,0) 70%); filter:blur(10px); pointer-events:none"></div>
+    <h1 style="position:relative; margin:0; font-family:'Outfit',sans-serif; font-weight:600; font-size:clamp(32px,5.5vw,52px); line-height:1.1; letter-spacing:-0.02em; max-width:760px">What is your AI agent actually worth this month?</h1>
+    <p style="position:relative; margin:20px 0 0; max-width:580px; font-size:17px; line-height:1.65; color:#9BA1AE">Plug in three numbers and get an estimate finance could believe. This is the quick version. agentworth gives you the verified one, with a receipt for every resolution.</p>
+  </section>
+
+  <section class="af-pad" style="padding:50px 48px 120px; display:flex; justify-content:center">
+    <div class="af-grid-2" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; max-width:1040px; width:100%; align-items:start">
+
+      <div style="background:linear-gradient(165deg,#15181F,#0F1115); border:1px solid #21242D; border-radius:18px; padding:32px">
+        <h2 style="margin:0 0 24px; font-family:'Outfit',sans-serif; font-size:20px; font-weight:600">Your numbers</h2>
+        <div style="display:flex; flex-direction:column; gap:20px">
+          <div class="af-field">
+            <label for="volume">Tickets or requests your agent handles per month</label>
+            <input id="volume" type="number" min="0" placeholder="e.g. 4000" value="4000">
+          </div>
+          <div class="af-field">
+            <label for="rate">Share of those it resolves without a human, percent</label>
+            <input id="rate" type="number" min="0" max="100" placeholder="e.g. 65" value="65">
+            <div class="af-hint">If you are not sure, a rough estimate is fine, you can refine it later.</div>
+          </div>
+          <div class="af-field">
+            <label for="cost">Fully loaded cost of a human handling one of these, in dollars</label>
+            <input id="cost" type="number" min="0" step="0.5" placeholder="e.g. 7.50" value="7.50">
+            <div class="af-hint">Agent wages plus overhead, divided by resolutions per month, is a reasonable stand in.</div>
+          </div>
+          <div class="af-field">
+            <label for="agentcost">What you pay for the AI agent itself per month, in dollars</label>
+            <input id="agentcost" type="number" min="0" step="1" placeholder="e.g. 1200" value="1200">
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:20px">
+        <div class="af-grid-3" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px">
+          <div class="af-stat">
+            <div class="af-stat-label">Resolved without a human</div>
+            <div class="af-stat-value" id="outResolutions">0</div>
+          </div>
+          <div class="af-stat">
+            <div class="af-stat-label">Cost avoided this month</div>
+            <div class="af-stat-value" id="outAvoided" style="color:var(--signal)">$0</div>
+          </div>
+          <div class="af-stat">
+            <div class="af-stat-label">Net value after agent cost</div>
+            <div class="af-stat-value" id="outNet">$0</div>
+          </div>
+          <div class="af-stat">
+            <div class="af-stat-label">Return for every dollar spent</div>
+            <div class="af-stat-value" id="outMultiple">0x</div>
+          </div>
+        </div>
+
+        <div style="background:#111319; border-left:2px solid var(--signal); border-radius:0 14px 14px 0; padding:22px 24px">
+          <div style="font-size:13px; color:#6B7280; margin-bottom:6px">Annualized</div>
+          <div style="font-family:'Outfit',sans-serif; font-size:26px; font-weight:600" id="outAnnual">$0 saved per year</div>
+        </div>
+
+        <div style="background:linear-gradient(165deg,#15181F,#0F1115); border:1px solid #21242D; border-radius:18px; padding:26px">
+          <p style="margin:0 0 16px; font-size:14.5px; line-height:1.65; color:#9BA1AE">This number is only as good as the estimate you typed in. That is exactly the problem agentworth exists to fix, we connect to your agent platform directly, track every real resolution, and hand finance a number with an audit trail behind it instead of an input box.</p>
+          <a id="verifyBtn" class="af-btn" style="display:inline-block; padding:13px 24px; border-radius:10px; background:var(--signal); color:#06111F; font-weight:600; font-size:14.5px; box-shadow:0 8px 24px rgba(46,155,255,0.35)">Get this number verified</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="af-pad" style="padding:40px 48px; display:flex; align-items:center; justify-content:space-between; border-top:1px solid #181B22; flex-wrap:wrap; gap:16px">
+    <a href="/"><img src="/logo.png" alt="agentworth" style="height:16px; width:auto; display:block; opacity:0.8"></a>
+    <span style="font-size:13px; color:#6B7280">&copy; 2026 agentworth. Built for teams who have to answer for their AI.</span>
+  </footer>
+
+</div>
+
+<script>
+  function fmtUSD(n) {
+    n = Math.round(n);
+    return '$' + n.toLocaleString('en-US');
+  }
+
+  function recalc() {
+    var volume = parseFloat(document.getElementById('volume').value) || 0;
+    var rate = parseFloat(document.getElementById('rate').value) || 0;
+    var cost = parseFloat(document.getElementById('cost').value) || 0;
+    var agentCost = parseFloat(document.getElementById('agentcost').value) || 0;
+
+    var resolutions = volume * (rate / 100);
+    var avoided = resolutions * cost;
+    var net = avoided - agentCost;
+    var multiple = agentCost > 0 ? (avoided / agentCost) : 0;
+    var annual = net * 12;
+
+    document.getElementById('outResolutions').textContent = Math.round(resolutions).toLocaleString('en-US');
+    document.getElementById('outAvoided').textContent = fmtUSD(avoided);
+    document.getElementById('outNet').textContent = fmtUSD(net);
+    document.getElementById('outMultiple').textContent = (Math.round(multiple * 10) / 10) + 'x';
+    document.getElementById('outAnnual').textContent = fmtUSD(annual) + ' saved per year';
+
+    var subject = encodeURIComponent('ROI calculator result, want this verified');
+    var body = encodeURIComponent(
+      'Here is what the calculator estimated for us:\n\n' +
+      'Monthly volume: ' + volume + '\n' +
+      'Resolution rate without a human: ' + rate + '%\n' +
+      'Cost per human resolution: $' + cost + '\n' +
+      'What we pay for the agent: $' + agentCost + '\n\n' +
+      'Estimated resolutions without a human: ' + Math.round(resolutions) + '\n' +
+      'Estimated cost avoided this month: ' + fmtUSD(avoided) + '\n' +
+      'Estimated net value after agent cost: ' + fmtUSD(net) + '\n\n' +
+      'Would like to see how agentworth verifies this with a real audit trail.'
+    );
+    document.getElementById('verifyBtn').href = 'mailto:hello@agentworth.cloud?subject=' + subject + '&body=' + body;
+  }
+
+  ['volume', 'rate', 'cost', 'agentcost'].forEach(function (id) {
+    document.getElementById(id).addEventListener('input', recalc);
+  });
+  recalc();
+</script>
+
+</body>
+</html>
