@@ -34,6 +34,14 @@
   .af-feature { transition: transform 0.25s ease, border-color 0.25s ease; }
   .af-feature:hover { transform: translateY(-6px); border-color: #37506B; }
 
+  .af-faq { border-bottom: 1px solid #1E2129; padding: 22px 0; }
+  .af-faq summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 17px; font-weight: 600; color: #F4F5F7; }
+  .af-faq summary::-webkit-details-marker { display: none; }
+  .af-faq summary::after { content: '+'; flex-shrink: 0; font-size: 22px; font-weight: 400; color: #6B7280; transition: transform 0.2s ease; line-height: 1; }
+  .af-faq[open] summary::after { transform: rotate(45deg); color: var(--signal); }
+  .af-faq summary:hover { color: var(--signal); }
+  .af-faq p { margin: 16px 0 0; font-size: 15px; line-height: 1.65; color: #9BA1AE; }
+
   @media (max-width: 680px) {
     .af-pad { padding-left: 24px !important; padding-right: 24px !important; }
     .af-grid-3 { grid-template-columns: 1fr !important; }
@@ -170,24 +178,24 @@
 
   <section id="faq" class="af-pad" style="padding:100px 48px; display:flex; justify-content:center">
     <div style="max-width:760px; width:100%">
-      <h2 style="font-family:'Outfit',sans-serif; font-weight:600; font-size:32px; margin:0 0 44px; letter-spacing:-0.01em; text-align:center">Questions before you talk to us</h2>
-      <div style="display:flex; flex-direction:column; gap:28px">
-        <div>
-          <h3 style="margin:0 0 8px; font-size:17px; font-weight:600">Do I need to switch agent platforms?</h3>
-          <p style="margin:0; font-size:15px; line-height:1.65; color:#9BA1AE">No. agentworth connects to the platform you already run and watches what it does. Nothing to migrate, nothing to switch.</p>
-        </div>
-        <div>
-          <h3 style="margin:0 0 8px; font-size:17px; font-weight:600">How is the ROI number verified, not just estimated?</h3>
-          <p style="margin:0; font-size:15px; line-height:1.65; color:#9BA1AE">Unlike a spreadsheet, every figure is tied to a specific resolution logged in your agent platform, timestamped and reviewable, so finance can trace it instead of just trusting it.</p>
-        </div>
-        <div>
-          <h3 style="margin:0 0 8px; font-size:17px; font-weight:600">Is my data safe?</h3>
-          <p style="margin:0; font-size:15px; line-height:1.65; color:#9BA1AE">We only read what is needed to calculate cost and quality per resolution, nothing more. Happy to walk through our data handling before you connect anything.</p>
-        </div>
-        <div>
-          <h3 style="margin:0 0 8px; font-size:17px; font-weight:600">What does it cost?</h3>
-          <p style="margin:0; font-size:15px; line-height:1.65; color:#9BA1AE">We are working directly with early customers on pricing that fits how they use it. Tell us a bit about your setup below and we will figure out the right number together.</p>
-        </div>
+      <h2 style="font-family:'Outfit',sans-serif; font-weight:600; font-size:32px; margin:0 0 36px; letter-spacing:-0.01em; text-align:center">Questions before you talk to us</h2>
+      <div style="display:flex; flex-direction:column; gap:0">
+        <details class="af-faq">
+          <summary>Do I need to switch agent platforms?</summary>
+          <p>No. agentworth connects to the platform you already run and watches what it does. Nothing to migrate, nothing to switch.</p>
+        </details>
+        <details class="af-faq">
+          <summary>How is the ROI number verified, not just estimated?</summary>
+          <p>Unlike a spreadsheet, every figure is tied to a specific resolution logged in your agent platform, timestamped and reviewable, so finance can trace it instead of just trusting it.</p>
+        </details>
+        <details class="af-faq">
+          <summary>Is my data safe?</summary>
+          <p>We only read what is needed to calculate cost and quality per resolution, nothing more. Happy to walk through our data handling before you connect anything.</p>
+        </details>
+        <details class="af-faq">
+          <summary>What does it cost?</summary>
+          <p>We are working directly with early customers on pricing that fits how they use it. Tell us a bit about your setup below and we will figure out the right number together.</p>
+        </details>
       </div>
     </div>
   </section>
