@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The cost per resolution number most teams get wrong · agentworth</title>
+<meta name="description" content="Most teams calculate cost per resolution with a formula that quietly ignores the cases that failed. Here is what a trustworthy version actually requires.">
+<meta property="og:image" content="https://agentworth.cloud/blog/posts/images/the-cost-per-resolution-number-most-teams-get-wrong-hero.png">
+<meta name="twitter:image" content="https://agentworth.cloud/blog/posts/images/the-cost-per-resolution-number-most-teams-get-wrong-hero.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --signal: #2E9BFF; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0B0C10; color: #F4F5F7; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--signal); text-decoration: none; }
+  .af-nav a { color: inherit; transition: color 0.2s ease; }
+  .af-nav a:hover { color: #F4F5F7; }
+  article h2 { font-family:'Outfit',sans-serif; font-weight:600; font-size:26px; margin:40px 0 14px; letter-spacing:-0.01em; }
+  article p { font-size:17px; line-height:1.75; color:#C7CBD1; margin:0 0 18px; }
+  article ul { margin:0 0 24px; padding-left:22px; }
+  article li { font-size:16.5px; line-height:1.7; color:#C7CBD1; margin:0 0 10px; }
+  @media (max-width: 680px) {
+    .af-pad { padding-left: 24px !important; padding-right: 24px !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="af-pad" style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:20px 48px; backdrop-filter:blur(12px); background:rgba(11,12,16,0.72); border-bottom:1px solid #1E2129">
+  <a href="/"><img src="/logo.png" alt="agentworth" style="height:22px; width:auto; display:block"></a>
+  <nav class="af-nav" style="display:flex; align-items:center; gap:36px; font-size:14px; color:#B6BBC4; flex-wrap:wrap">
+    <a href="/#how-it-works">How it works</a>
+    <a href="/#roi-calculator">ROI calculator</a>
+    <a href="/blog/" style="color:#F4F5F7">Blog</a>
+    <a href="/#contact" style="padding:10px 20px; border-radius:999px; background:var(--signal); color:#06111F; font-weight:600">Get in touch</a>
+  </nav>
+</header>
+
+<article class="af-pad" style="padding:80px 48px 120px; max-width:720px; margin:0 auto">
+  <a href="/blog/" style="font-size:14px; color:#6B7280">&larr; Back to blog</a>
+  <div style="font-size:13px; color:#6B7280; margin-top:24px">October 18, 2026</div>
+  <h1 style="font-family:'Outfit',sans-serif; font-weight:600; font-size:clamp(30px,5vw,42px); margin:12px 0 32px; letter-spacing:-0.02em">The cost per resolution number most teams get wrong</h1>
+
+  <img src="images/the-cost-per-resolution-number-most-teams-get-wrong-hero.png" alt="The cost per resolution number most teams get wrong" style="width:100%; height:auto; border-radius:14px; margin:0 0 32px; display:block">
+
+  <p>Ask most ops teams what their AI agent costs per resolution and they will give you a number fast. Take the monthly platform bill, divide by the number of tickets the agent closed, done. It feels rigorous because it has a denominator. It is also, almost every time, wrong in a way that flatters the agent.</p>
+
+  <p>The problem is not the math. It is what gets counted as a resolution in the first place.</p>
+
+  <h2>The formula everyone starts with</h2>
+  <p>Platform cost divided by tickets closed looks clean on a slide. It also assumes every closed ticket is a success, that a human handling the same case would cost some neat average figure pulled from an HR spreadsheet, and that closing the loop today is the end of the story. None of those three assumptions survive contact with real support data.</p>
+
+  <h2>Where the number quietly breaks</h2>
+  <p>First, "closed" is not "resolved." Plenty of agent platforms log a ticket as closed the moment the conversation ends, whether or not the customer's actual problem went away. If a meaningful share of those tickets come back within a few days under a new ticket number, the agent did not resolve them. It deferred them, at a cost nobody is tracking.</p>
+
+  <p>Second, the human comparison side is usually a guess. Teams reach for a company wide average handling cost per ticket, which buries huge variance between a one line password reset and a forty five minute billing dispute. If the agent is disproportionately picking up the easy cases, a flat average will overstate what it is saving, sometimes by a lot.</p>
+
+  <p>Third, the agent's own cost side is often undercounted too. The subscription fee is in there, but the token spend on longer conversations, the fallback calls to a larger model when the first attempt stalls, and the human escalation time when the agent hands off a case it could not finish rarely make it into the formula. A number missing costs on one side and inflating savings on the other is not a modeling error you can shrug off. It is two errors pointed the same direction.</p>
+
+  <h2>What a trustworthy version actually requires</h2>
+  <p>A defensible cost per resolution needs three things most dashboards never surface. It needs resolutions tracked long enough to see whether they held, so a reopened case can be pulled back out of the win column. It needs the human cost side built case by case, matched to the type of issue the agent actually handled, not a blended average. And it needs every real cost of running the agent counted, including the cases it escalated, since a handoff is a cost too, not a rounding error.</p>
+
+  <p>None of that is exotic. It is closer to how any other finance function would be expected to report a cost figure, with a record behind every number instead of an assumption standing in for one. The reason so few teams do it this way for AI agents specifically is that the data lives scattered across the agent platform, the ticketing system, and whatever spreadsheet someone built to bridge the two, and reconciling all three by hand every month is not a job anyone volunteers for twice.</p>
+
+  <p>That reconciliation is the actual product. agentworth pulls the agent's resolution data, tracks whether each case held or came back, prices the human alternative at the case level instead of a blended guess, and keeps the full trail so finance can check any number back to the cases behind it. The output is not a prettier cost per resolution chart. It is a cost per resolution figure you could defend in a budget meeting without changing the subject.</p>
+
+  <p>If you want to see what your own number looks like with the reopens and escalation costs put back in, try the <a href="/roi-calculator/">free ROI calculator</a>, or read the <a href="/ai-agent-roi-report/">full ROI report</a> for more on where these numbers tend to go wrong across the industry.</p>
+</article>
+
+<footer class="af-pad" style="padding:40px 48px; display:flex; align-items:center; justify-content:space-between; border-top:1px solid #181B22; flex-wrap:wrap; gap:16px; max-width:720px; margin:0 auto">
+  <a href="/"><img src="/logo.png" alt="agentworth" style="height:16px; width:auto; display:block; opacity:0.8"></a>
+  <span style="font-size:13px; color:#6B7280">&copy; 2026 agentworth. Built for teams who have to answer for their AI.</span>
+</footer>
+
+</body>
+</html>
