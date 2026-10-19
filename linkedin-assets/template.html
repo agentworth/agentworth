@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 1200px;
+    height: 627px;
+    background: #0B0C10;
+    color: #F4F5F7;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow: hidden;
+  }
+  .canvas {
+    position: relative;
+    width: 1200px;
+    height: 627px;
+  }
+  .glow {
+    position: absolute;
+    top: -220px;
+    right: -180px;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(46,155,255,0.35) 0%, rgba(46,155,255,0.12) 40%, rgba(46,155,255,0) 70%);
+    filter: blur(10px);
+  }
+  .glow2 {
+    position: absolute;
+    bottom: -260px;
+    left: -160px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(46,155,255,0.14) 0%, rgba(46,155,255,0) 70%);
+    filter: blur(10px);
+  }
+  .logo {
+    position: absolute;
+    top: 56px;
+    left: 64px;
+    height: 24px;
+    width: auto;
+    display: block;
+    opacity: 0.92;
+  }
+  .content {
+    position: absolute;
+    left: 64px;
+    right: 64px;
+    top: 220px;
+  }
+  .headline {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    color: #F4F5F7;
+    max-width: 1040px;
+  }
+  .accent-bar {
+    position: absolute;
+    left: 64px;
+    top: 172px;
+    width: 64px;
+    height: 6px;
+    border-radius: 3px;
+    background: #2E9BFF;
+  }
+  .kicker {
+    position: absolute;
+    left: 64px;
+    bottom: 56px;
+    font-size: 16px;
+    color: #6B7280;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="glow"></div>
+    <div class="glow2"></div>
+    <img class="logo" src="../logo.png" alt="agentworth">
+    <div class="accent-bar"></div>
+    <div class="content">
+      <div class="headline">{{HEADLINE}}</div>
+    </div>
+    <div class="kicker">agentworth.cloud</div>
+  </div>
+</body>
+</html>
