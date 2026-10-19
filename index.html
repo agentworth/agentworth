@@ -290,9 +290,11 @@
     var message = document.getElementById('message').value;
     var subject = encodeURIComponent('Inquiry from ' + (company || 'a company'));
     var body = encodeURIComponent('Company: ' + company + '\nEmail: ' + email + '\n\n' + message);
+    if (window.va) { window.va('event', { name: 'contact_form_submit' }); }
     window.location.href = 'mailto:hello@agentworth.cloud?subject=' + subject + '&body=' + body;
   });
 </script>
 
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

@@ -55,6 +55,8 @@ def footer():
 </footer>"""
 
 
+ANALYTICS_SCRIPT = '<script defer src="/_vercel/insights/script.js"></script>'
+
 def page_shell(title, meta_desc, canonical_path, body_inner):
     return f"""<!doctype html>
 <html lang="en">
@@ -71,6 +73,7 @@ def page_shell(title, meta_desc, canonical_path, body_inner):
 {HEADER}
 {body_inner}
 {footer()}
+{ANALYTICS_SCRIPT}
 </body>
 </html>
 """
