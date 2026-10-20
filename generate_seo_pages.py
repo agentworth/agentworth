@@ -115,6 +115,12 @@ def related_links(items, base):
     links = "".join(f'<a href="{base}{slug}/">{label}</a>' for slug, label in items)
     return f'<div class="af-related">{links}</div>'
 
+def related_links_abs(items):
+    # Like related_links, but items are (full_path, label) pairs instead of
+    # (slug, label) pairs within a single category, for cross category links.
+    links = "".join(f'<a href="{path}">{label}</a>' for path, label in items)
+    return f'<div class="af-related">{links}</div>'
+
 # ---------------------------------------------------------------------------
 # INDUSTRY PAGES  (/roi-for/<slug>/)
 # ---------------------------------------------------------------------------
@@ -337,6 +343,16 @@ COMPARISONS = [
         ],
         "differs": "agentworth calculates the number continuously, so a quarterly review becomes a report you already have instead of a project you have to start from scratch every three months.",
     },
+    {
+        "topic": "Customer satisfaction scores", "slug": "customer-satisfaction-scores",
+        "what_it_is": "A CSAT or NPS style score collected right after a support interaction, used as a quick signal that customers are generally happy with how their issue was handled.",
+        "breaks": [
+            "A satisfaction score captures the customer's mood in the moment, not whether the resolution actually held or what it cost the business to deliver",
+            "Survey response rates are usually low and skewed toward people who had either a very good or a very bad experience, so the score rarely represents the full population of conversations",
+            "A satisfied customer can still represent a resolution that lost money, if the agent granted a refund or concession it should not have",
+        ],
+        "differs": "agentworth calculates ROI from the verified cost and outcome of each resolution rather than from how the customer felt about it afterward, so a feel good survey score and a sound financial number are tracked as two separate things instead of being treated as the same one.",
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -433,6 +449,11 @@ GLOSSARY = [
         "definition": "Estimated ROI is calculated from assumptions typed into a model, while verified ROI is calculated from an audited record of what the agent actually did.",
         "matters": "A free calculator can give you an estimate in thirty seconds, but only a verified number, tied to an audit trail, will survive being challenged by finance or the board.",
     },
+    {
+        "term": "False escalation", "slug": "false-escalation",
+        "definition": "An escalation to a human agent that did not actually need to happen, because the AI agent was capable of resolving the issue correctly but handed it off anyway, often out of caution, a confidence threshold set too conservatively, or a gap in what it was trained to handle.",
+        "matters": "A high false escalation rate quietly inflates the human labor cost sitting behind an AI agent program, since every one of these handoffs consumes real staff time that a better tuned agent would not have needed, and it almost never shows up in a plain escalation rate figure, because that number cannot tell a necessary escalation apart from an unnecessary one.",
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -519,6 +540,76 @@ USE_CASES = [
             "Coverage compared to a manual compliance review process",
             "Time to flag a genuine issue compared to the prior manual review cadence",
         ],
+    },
+]
+
+# ---------------------------------------------------------------------------
+# COMBINATION PAGES  (/use-cases/<industry>-<agent-type>/)
+# Industry crossed with agent type, with content specific to that combination,
+# not a copy paste of the separate industry and use case pages.
+# ---------------------------------------------------------------------------
+COMBINATIONS = [
+    {
+        "name": "AI compliance agent in insurance", "slug": "insurance-ai-compliance-agent",
+        "intro": "A compliance agent that reviews generic documents is one kind of system. A compliance agent reviewing insurance claims and policy language sits inside state insurance regulation and market conduct exam scrutiny, and that changes what actually counts as a good resolution.",
+        "bullets": [
+            "A flagged issue that would never actually surface in a market conduct exam is not real risk reduction, it is just noise that costs a reviewer time",
+            "A missed referral to the special investigations unit on a claim that turns out to be fraudulent costs far more than anything the agent saved that quarter",
+            "Policy disclosure reviews have to be checked against each state's specific requirements, not a single generic rule set, or the flag rate does not mean much",
+        ],
+        "closing": "agentworth ties this combination's resolutions to the kind of findings a market conduct exam or a special investigations unit referral would actually care about, so the ROI case for a compliance agent reviewing insurance claims holds up under the same scrutiny the claims themselves face.",
+        "related": [
+            ("/roi-for/insurance/", "AI agent ROI for Insurance"),
+            ("/use-cases/ai-compliance-agent/", "Proving ROI for an AI compliance agent"),
+            ("/glossary/audit-trail-for-ai-decisions/", "Audit trail for AI decisions"),
+            ("/glossary/verified-roi-vs-estimated-roi/", "Verified ROI vs estimated ROI"),
+        ],
+    },
+]
+
+# ---------------------------------------------------------------------------
+# FAQ PAGES  (/faq/<slug>/)
+# A specific real question someone would type into Google, answered directly
+# in a couple of short paragraphs.
+# ---------------------------------------------------------------------------
+FAQS = [
+    {
+        "question": "Does AI agent ROI include the labor cost of reviewing escalations?",
+        "slug": "escalation-review-labor-cost",
+        "subhead": "Short answer, it should, and a lot of reported numbers quietly leave it out.",
+        "body": """
+  <h2>Short answer</h2>
+  <p>A number is only honest if it does. Every AI agent program that is not fully hands off still needs a human to review the cases the agent could not close, the ones it flagged as uncertain, or a sample of the ones it marked resolved. That reviewer's time is a real cost, and if it never gets subtracted from the agent's gross savings, the reported ROI is overstated.</p>
+  <h2>Why this is easy to get wrong</h2>
+  <p>Most of the savings story comes from the resolutions the agent handled on its own, so that is where the attention goes. The cost of the human layer sitting behind the agent, reviewing escalations, approving edge cases, or auditing a slice of what the agent closed, tends to live in a different budget line and gets left out of the comparison. An agent that resolves most of its queue automatically but still needs a reviewer checking a third of it is not nearly as cheap as the headline resolution rate makes it look.</p>
+  <p>Before trusting a vendor's ROI claim, ask whether the stated cost per resolution already has that reviewer time subtracted, or whether it only counts the cases the agent closed without anyone looking at them. If the answer is the second one, you are looking at gross savings, not net ROI.</p>
+""",
+        "related": [
+            ("/glossary/human-in-the-loop/", "Human in the loop"),
+            ("/glossary/cost-avoidance-vs-cost-savings/", "Cost avoidance vs cost savings"),
+            ("/glossary/net-value-per-resolution/", "Net value per resolution"),
+            ("/compare/vanity-metrics/", "agentworth vs Vanity metrics like tickets closed"),
+        ],
+        "meta": "A straight answer on whether AI agent ROI numbers account for the human labor still spent reviewing escalated or flagged cases.",
+    },
+    {
+        "question": "How long does it take to see AI agent ROI?",
+        "slug": "time-to-see-ai-agent-roi",
+        "subhead": "Long enough that the first few weeks of good looking numbers should not be trusted on their own.",
+        "body": """
+  <h2>Short answer</h2>
+  <p>There is no single timeline that holds for every team, but a reasonable pattern is that a directionally useful number tends to show up within the first couple of months after launch, while a number solid enough to defend in front of a board usually needs a full quarter of data behind it.</p>
+  <h2>Why it takes longer than the early numbers suggest</h2>
+  <p>An agent tends to look best in its first few weeks, because it is handling the easiest, most common questions first while harder cases are still being routed to humans or tuned by hand. Early containment and resolution numbers from that period are real, but they are not representative of the full mix the agent will eventually carry.</p>
+  <p>The other reason a full quarter matters is seasonality and normal volume swings. A support queue that is quiet one month and busy the next will make the same agent look like it is performing very differently from one period to the next, even though nothing about the agent itself changed. A number that only covers a few weeks has not yet had the chance to average that out.</p>
+""",
+        "related": [
+            ("/glossary/payback-period/", "Payback period for AI agents"),
+            ("/glossary/ticket-volume-normalization/", "Ticket volume normalization"),
+            ("/glossary/verified-roi-vs-estimated-roi/", "Verified ROI vs estimated ROI"),
+            ("/compare/quarterly-audits/", "agentworth vs Quarterly audits"),
+        ],
+        "meta": "A realistic timeline for when an AI agent program starts producing a trustworthy ROI number, and why the first few weeks are usually misleading.",
     },
 ]
 
@@ -651,6 +742,27 @@ for item in USE_CASES:
     all_urls.append(canonical)
     usecase_cards.append(f'<a href="/use-cases/{slug}/" class="af-hubcard" style="display:block"><h3>{item["name"]}</h3><p>{item["scenario"][:90]}...</p></a>')
 
+# ---- Combination pages (industry x agent type) ----
+for item in COMBINATIONS:
+    slug = item["slug"]
+    canonical = f"/use-cases/{slug}/"
+    title = f"ROI for an {item['name']} — agentworth"
+    meta = f"What changes in the ROI math for an {item['name'].lower()}, and where the number usually breaks for this combination."
+    body = f"""
+  <p>{item['intro']}</p>
+  <h2>Where the number usually breaks</h2>
+  {bullets_html(item['bullets'])}
+  <h2>What this looks like with agentworth</h2>
+  <p>{item['closing']}</p>
+"""
+    related = related_links_abs(item["related"])
+    html = content_page("/use-cases/", "All use cases", "USE CASE", f"ROI for an {item['name']}",
+                         f"What actually changes when you combine this industry and this agent type, and where the ROI number usually breaks.",
+                         body, related, title, meta, canonical)
+    write_file(f"use-cases/{slug}/index.html", html)
+    all_urls.append(canonical)
+    usecase_cards.append(f'<a href="/use-cases/{slug}/" class="af-hubcard" style="display:block"><h3>{item["name"]}</h3><p>{item["intro"][:90]}...</p></a>')
+
 hub = hub_page("USE CASES", "Proving ROI, by agent type",
                "The signals that matter change depending on what the agent actually does. Find yours.",
                "".join(usecase_cards),
@@ -658,6 +770,29 @@ hub = hub_page("USE CASES", "Proving ROI, by agent type",
                "/use-cases/")
 write_file("use-cases/index.html", hub)
 all_urls.append("/use-cases/")
+
+# ---- FAQ pages ----
+faq_cards = []
+for item in FAQS:
+    slug = item["slug"]
+    canonical = f"/faq/{slug}/"
+    title = f"{item['question']} — agentworth FAQ"
+    meta = item["meta"]
+    related = related_links_abs(item["related"])
+    html = content_page("/faq/", "All FAQs", "FAQ", item["question"],
+                         item["subhead"],
+                         item["body"], related, title, meta, canonical)
+    write_file(f"faq/{slug}/index.html", html)
+    all_urls.append(canonical)
+    faq_cards.append(f'<a href="/faq/{slug}/" class="af-hubcard" style="display:block"><h3>{item["question"]}</h3><p>{item["subhead"][:90]}...</p></a>')
+
+hub = hub_page("FAQ", "AI agent ROI, answered directly",
+               "Specific questions people actually ask before they trust an ROI number.",
+               "".join(faq_cards),
+               "AI agent ROI FAQ — agentworth", "Direct answers to specific questions about measuring AI agent ROI.",
+               "/faq/")
+write_file("faq/index.html", hub)
+all_urls.append("/faq/")
 
 # ---- sitemap.xml ----
 existing_urls = ["/", "/blog/", "/ai-agent-roi-report/", "/roi-calculator/"]
@@ -670,4 +805,4 @@ sitemap = f"""<?xml version="1.0" encoding="UTF-8"?>
 """
 write_file("sitemap.xml", sitemap)
 
-print(f"Generated {len(all_urls)} SEO pages + 4 hub pages + sitemap.xml ({len(all_entries)} total URLs).")
+print(f"Generated {len(all_urls)} SEO pages + 5 hub pages + sitemap.xml ({len(all_entries)} total URLs).")
