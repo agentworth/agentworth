@@ -2,3 +2,4 @@
 2026-10-18 the-cost-per-resolution-number-most-teams-get-wrong
 2026-10-19 the-before-and-after-trap-in-ai-agent-roi-claims
 2026-10-20 the-month-six-problem-in-ai-agent-roi-claims
+2026-10-21 the-human-review-cost-most-ai-agent-roi-math-forgets
