@@ -26,6 +26,7 @@
   <url><loc>https://agentworth.cloud/compare/native-reporting/</loc></url>
   <url><loc>https://agentworth.cloud/compare/quarterly-audits/</loc></url>
   <url><loc>https://agentworth.cloud/compare/customer-satisfaction-scores/</loc></url>
+  <url><loc>https://agentworth.cloud/compare/task-completion-rate-alone/</loc></url>
   <url><loc>https://agentworth.cloud/compare/</loc></url>
   <url><loc>https://agentworth.cloud/glossary/cost-per-resolution/</loc></url>
   <url><loc>https://agentworth.cloud/glossary/ai-agent-roi/</loc></url>
@@ -46,6 +47,8 @@
   <url><loc>https://agentworth.cloud/glossary/agent-uptime-vs-agent-accuracy/</loc></url>
   <url><loc>https://agentworth.cloud/glossary/verified-roi-vs-estimated-roi/</loc></url>
   <url><loc>https://agentworth.cloud/glossary/false-escalation/</loc></url>
+  <url><loc>https://agentworth.cloud/glossary/build-versus-buy-for-ai-agents/</loc></url>
+  <url><loc>https://agentworth.cloud/glossary/vendor-lock-in-for-ai-agents/</loc></url>
   <url><loc>https://agentworth.cloud/glossary/</loc></url>
   <url><loc>https://agentworth.cloud/use-cases/ai-support-agent/</loc></url>
   <url><loc>https://agentworth.cloud/use-cases/ai-sales-agent/</loc></url>
@@ -57,8 +60,10 @@
   <url><loc>https://agentworth.cloud/use-cases/ai-research-agent/</loc></url>
   <url><loc>https://agentworth.cloud/use-cases/ai-compliance-agent/</loc></url>
   <url><loc>https://agentworth.cloud/use-cases/insurance-ai-compliance-agent/</loc></url>
+  <url><loc>https://agentworth.cloud/use-cases/ecommerce-ai-support-agent/</loc></url>
   <url><loc>https://agentworth.cloud/use-cases/</loc></url>
   <url><loc>https://agentworth.cloud/faq/escalation-review-labor-cost/</loc></url>
   <url><loc>https://agentworth.cloud/faq/time-to-see-ai-agent-roi/</loc></url>
+  <url><loc>https://agentworth.cloud/faq/what-counts-as-a-resolution-for-roi-purposes/</loc></url>
   <url><loc>https://agentworth.cloud/faq/</loc></url>
 </urlset>

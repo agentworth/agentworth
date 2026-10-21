@@ -353,6 +353,16 @@ COMPARISONS = [
         ],
         "differs": "agentworth calculates ROI from the verified cost and outcome of each resolution rather than from how the customer felt about it afterward, so a feel good survey score and a sound financial number are tracked as two separate things instead of being treated as the same one.",
     },
+    {
+        "topic": "Task completion rate alone", "slug": "task-completion-rate-alone",
+        "what_it_is": "Reporting the percentage of tasks an AI agent finished start to finish as the primary measure of whether the agent is working, without weighing what each task was actually worth.",
+        "breaks": [
+            "A high completion rate treats a trivial task and a complex, high stakes one as equally valuable, which flattens a picture a finance team actually needs to see",
+            "Completion says nothing about whether the output was correct, only that the agent reached an end state",
+            "It gives no way to compare the cost of reaching that completion against what a human would have spent reaching the same one",
+        ],
+        "differs": "agentworth starts from the dollar value and verified correctness of each completed task rather than the raw count of tasks finished, so two agents with the same completion rate can still show very different ROI once what they actually completed is weighed.",
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -453,6 +463,16 @@ GLOSSARY = [
         "term": "False escalation", "slug": "false-escalation",
         "definition": "An escalation to a human agent that did not actually need to happen, because the AI agent was capable of resolving the issue correctly but handed it off anyway, often out of caution, a confidence threshold set too conservatively, or a gap in what it was trained to handle.",
         "matters": "A high false escalation rate quietly inflates the human labor cost sitting behind an AI agent program, since every one of these handoffs consumes real staff time that a better tuned agent would not have needed, and it almost never shows up in a plain escalation rate figure, because that number cannot tell a necessary escalation apart from an unnecessary one.",
+    },
+    {
+        "term": "Build versus buy for AI agents", "slug": "build-versus-buy-for-ai-agents",
+        "definition": "The decision between purchasing a prebuilt AI agent platform and building a custom one in house, weighed not just on upfront cost but on who ends up responsible for the ongoing accuracy, maintenance, and reporting work once it is live.",
+        "matters": "Teams usually compare this decision on licensing cost alone, but the real cost difference tends to show up later, in whichever side ends up responsible for proving the agent actually works and keeps working as volume and use cases change.",
+    },
+    {
+        "term": "Vendor lock in for AI agents", "slug": "vendor-lock-in-for-ai-agents",
+        "definition": "The degree to which a company's resolution data, workflows, and reporting are tied to a single AI agent vendor's platform, making it difficult or costly to switch providers or compare vendors against each other later.",
+        "matters": "A heavily locked in setup makes it hard to challenge a vendor's own reported numbers, since there is no independent way to check them without first extracting data the platform was never built to export.",
     },
 ]
 
@@ -565,6 +585,22 @@ COMBINATIONS = [
             ("/glossary/verified-roi-vs-estimated-roi/", "Verified ROI vs estimated ROI"),
         ],
     },
+    {
+        "name": "AI support agent in ecommerce", "slug": "ecommerce-ai-support-agent",
+        "intro": "A generic support agent gets measured on resolution rate and cost per ticket. A support agent sitting inside ecommerce lives inside order cycles, return windows, and payment processing, and that context changes what a resolution is actually worth.",
+        "bullets": [
+            "A where is my order question closed before the package actually arrives is not a real resolution if the customer contacts support again once it still has not shown up",
+            "Return and refund conversations carry a real dollar cost that has to be subtracted from the savings, since granting a refund the policy did not call for is not a win even if the ticket closed cleanly",
+            "Checkout and payment failure questions spike hard around sales events, and a support agent handling that spike needs to be judged against that volume, not against a normal week",
+        ],
+        "closing": "agentworth ties this combination's resolutions to order status and refund outcomes rather than ticket count alone, so an ecommerce support agent's ROI case reflects whether packages actually arrived and refunds were actually warranted, not just whether the conversation ended.",
+        "related": [
+            ("/roi-for/ecommerce/", "AI agent ROI for Ecommerce"),
+            ("/use-cases/ai-support-agent/", "Proving ROI for an AI support agent"),
+            ("/glossary/first-contact-resolution/", "First contact resolution"),
+            ("/glossary/cost-avoidance-vs-cost-savings/", "Cost avoidance vs cost savings"),
+        ],
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -610,6 +646,25 @@ FAQS = [
             ("/compare/quarterly-audits/", "agentworth vs Quarterly audits"),
         ],
         "meta": "A realistic timeline for when an AI agent program starts producing a trustworthy ROI number, and why the first few weeks are usually misleading.",
+    },
+    {
+        "question": "What counts as a resolution for ROI purposes?",
+        "slug": "what-counts-as-a-resolution-for-roi-purposes",
+        "subhead": "Not every closed ticket is a resolution, and the gap between the two is where a lot of ROI numbers quietly fall apart.",
+        "body": """
+  <h2>Short answer</h2>
+  <p>A resolution, for ROI purposes, should mean the customer's actual issue was solved and stayed solved, not that a ticket status changed to closed. Those are two different things, and a system that only tracks the second one will always report a higher number than the first one would support.</p>
+  <h2>Why the difference matters</h2>
+  <p>A ticket can be closed for reasons that have nothing to do with the issue being fixed. A customer gives up and stops responding, an agent closes a case to clear a queue, or a conversation times out after a set number of hours. None of those are resolutions in any meaningful sense, but all of them can inflate a reported resolution count if the system counts by status rather than by outcome.</p>
+  <p>A tighter definition checks whether the same issue comes back within a reasonable window. If it does, the original closure was not really a resolution regardless of what the status field said, and counting it as one overstates what the agent actually accomplished.</p>
+""",
+        "related": [
+            ("/glossary/first-contact-resolution/", "First contact resolution"),
+            ("/glossary/resolution-rate/", "Resolution rate"),
+            ("/glossary/deflection-rate/", "Deflection rate"),
+            ("/compare/vanity-metrics/", "agentworth vs Vanity metrics like tickets closed"),
+        ],
+        "meta": "A direct answer to what should count as a resolution when measuring AI agent ROI, and why closed ticket counts overstate the real number.",
     },
 ]
 

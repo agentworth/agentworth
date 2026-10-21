@@ -58,3 +58,10 @@ GLOSSARY: false-escalation (2026-10-20)
 USE-CASES: insurance-ai-compliance-agent (2026-10-20)
 FAQ: escalation-review-labor-cost (2026-10-20)
 FAQ: time-to-see-ai-agent-roi (2026-10-20)
+
+# --- 2026-10-21: daily programmatic SEO run ---
+COMPARE: task-completion-rate-alone (2026-10-21)
+GLOSSARY: build-versus-buy-for-ai-agents (2026-10-21)
+GLOSSARY: vendor-lock-in-for-ai-agents (2026-10-21)
+USE-CASES: ecommerce-ai-support-agent (2026-10-21)
+FAQ: what-counts-as-a-resolution-for-roi-purposes (2026-10-21)
