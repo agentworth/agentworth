@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The human review cost most AI agent ROI math forgets · agentworth</title>
+<meta name="description" content="Most AI agent ROI math subtracts the agent's own cost but leaves out the humans still reviewing, escalating, and fixing its work, and that gap is where a savings number stops being true.">
+<meta property="og:image" content="https://agentworth.cloud/blog/posts/images/the-human-review-cost-most-ai-agent-roi-math-forgets-hero.png">
+<meta name="twitter:image" content="https://agentworth.cloud/blog/posts/images/the-human-review-cost-most-ai-agent-roi-math-forgets-hero.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --signal: #2E9BFF; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0B0C10; color: #F4F5F7; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--signal); text-decoration: none; }
+  .af-nav a { color: inherit; transition: color 0.2s ease; }
+  .af-nav a:hover { color: #F4F5F7; }
+  article h2 { font-family:'Outfit',sans-serif; font-weight:600; font-size:26px; margin:40px 0 14px; letter-spacing:-0.01em; }
+  article p { font-size:17px; line-height:1.75; color:#C7CBD1; margin:0 0 18px; }
+  article ul { margin:0 0 24px; padding-left:22px; }
+  article li { font-size:16.5px; line-height:1.7; color:#C7CBD1; margin:0 0 10px; }
+  @media (max-width: 680px) {
+    .af-pad { padding-left: 24px !important; padding-right: 24px !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="af-pad" style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:20px 48px; backdrop-filter:blur(12px); background:rgba(11,12,16,0.72); border-bottom:1px solid #1E2129">
+  <a href="/"><img src="/logo.png" alt="agentworth" style="height:22px; width:auto; display:block"></a>
+  <nav class="af-nav" style="display:flex; align-items:center; gap:36px; font-size:14px; color:#B6BBC4; flex-wrap:wrap">
+    <a href="/#how-it-works">How it works</a>
+    <a href="/#roi-calculator">ROI calculator</a>
+    <a href="/blog/" style="color:#F4F5F7">Blog</a>
+    <a href="/#contact" style="padding:10px 20px; border-radius:999px; background:var(--signal); color:#06111F; font-weight:600">Get in touch</a>
+  </nav>
+</header>
+
+<article class="af-pad" style="padding:80px 48px 120px; max-width:720px; margin:0 auto">
+  <a href="/blog/" style="font-size:14px; color:#6B7280">&larr; Back to blog</a>
+  <div style="font-size:13px; color:#6B7280; margin-top:24px">October 21, 2026</div>
+  <h1 style="font-family:'Outfit',sans-serif; font-weight:600; font-size:clamp(30px,5vw,42px); margin:12px 0 32px; letter-spacing:-0.02em">The human review cost most AI agent ROI math forgets</h1>
+
+  <img src="images/the-human-review-cost-most-ai-agent-roi-math-forgets-hero.png" alt="The human review cost most AI agent ROI math forgets" style="width:100%; height:auto; border-radius:14px; margin:0 0 32px; display:block">
+
+  <p>Ask a team how much their AI agent is saving them and you will usually get a clean number. Tickets resolved automatically, multiplied by what a human would have cost to resolve the same ticket. It looks like simple arithmetic. It is also missing an entire column of the ledger.</p>
+
+  <p>Almost every AI agent handling real customer work still has people behind it. Someone is spot checking a sample of conversations for tone and accuracy. Someone is the person the agent escalates to when it is unsure, which happens more often than most dashboards admit. Someone reads the flagged transcripts after a customer complains, and someone rewrites the prompts every time a product change makes the agent's old answers wrong. None of that work shows up in the savings number, because none of it was ever counted as a cost of running the agent in the first place.</p>
+
+  <h2>Where the review cost actually hides</h2>
+  <p>It is not one line item, which is part of why it gets missed. It is spread across a handful of roles that each absorb a small piece of it and none of them labeled "AI agent oversight" in anyone's time tracking. A support lead spends an hour each morning reading a sample of the agent's conversations before the rest of the team logs on. A senior rep keeps a side channel open for the cases the agent hands off, cases that are disproportionately the hardest, angriest, or highest value tickets in the queue. An ops person updates the agent's instructions every time pricing or policy changes, work that used to not exist at all before the agent did.</p>
+
+  <p>Add it up and it is often a real person's part time job, sometimes close to a full one. It just never gets subtracted from the savings total, because nobody built a line for it when the ROI slide was first put together.</p>
+
+  <h2>Why nobody subtracts it</h2>
+  <p>Part of the reason is incentive. The team that owns the agent is usually the same team that reports on whether it is working, and a smaller number is not the number anyone wants to present at a budget review. Part of it is genuinely hard to measure. Review time is scattered across people and tools, rarely tracked with the same precision as the tickets it affects, so even a well meaning team can struggle to put a defensible figure on it.</p>
+
+  <p>But the bigger reason is that most ROI math was built to answer one question, whether the agent resolves tickets cheaper than a person. That question has a flattering answer almost every time. It is a different, less comfortable question, whether the agent resolves tickets cheaper than a person once you count everyone still required to keep it safe, that tends to shrink the number considerably.</p>
+
+  <h2>What a real number has to include</h2>
+  <p>A defensible ROI figure treats human review as a cost center the same way it treats the AI agent's own usage fees, not as a rounding error to ignore. That means logging who reviewed what, how long it took, and why, the same way the agent's own resolutions get logged. It means tracking escalations as a cost, not just a quality metric, since every one of them is a case the agent did not actually resolve on its own. And it means revisiting that number whenever the team's reviewing and escalating habits change, because they will, as trust in the agent grows or a bad week makes everyone double check it again.</p>
+
+  <p>None of this is an argument against using AI agents. It is an argument against pretending the people still watching them cost nothing. A number that only counts what the agent did, and never what it took to keep the agent reliable, was never the full picture to begin with.</p>
+
+  <p>This is exactly the gap agentworth's audit log is built to close, logging the agent's outcomes and the human work around them on the same ledger, so the ROI number that reaches finance already has the review cost subtracted rather than discovered later. Try the <a href="/roi-calculator/">free ROI calculator</a> to see where your own number sits, or read the <a href="/ai-agent-roi-report/">full ROI report</a> for more on what a trustworthy AI agent ROI figure actually requires.</p>
+</article>
+
+<footer class="af-pad" style="padding:40px 48px; display:flex; align-items:center; justify-content:space-between; border-top:1px solid #181B22; flex-wrap:wrap; gap:16px; max-width:720px; margin:0 auto">
+  <a href="/"><img src="/logo.png" alt="agentworth" style="height:16px; width:auto; display:block; opacity:0.8"></a>
+  <span style="font-size:13px; color:#6B7280">&copy; 2026 agentworth. Built for teams who have to answer for their AI.</span>
+</footer>
+
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
