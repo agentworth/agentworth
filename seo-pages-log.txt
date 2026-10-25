@@ -65,3 +65,10 @@ GLOSSARY: build-versus-buy-for-ai-agents (2026-10-21)
 GLOSSARY: vendor-lock-in-for-ai-agents (2026-10-21)
 USE-CASES: ecommerce-ai-support-agent (2026-10-21)
 FAQ: what-counts-as-a-resolution-for-roi-purposes (2026-10-21)
+
+# --- 2026-10-25: daily programmatic SEO run ---
+GLOSSARY: quality-assurance-scorecard (2026-10-25)
+GLOSSARY: agent-confidence-score (2026-10-25)
+COMPARE: headcount-reduction-alone (2026-10-25)
+USE-CASES: fintech-ai-collections-agent (2026-10-25)
+FAQ: cost-of-failed-deployments (2026-10-25)

@@ -363,6 +363,16 @@ COMPARISONS = [
         ],
         "differs": "agentworth starts from the dollar value and verified correctness of each completed task rather than the raw count of tasks finished, so two agents with the same completion rate can still show very different ROI once what they actually completed is weighed.",
     },
+    {
+        "topic": "Headcount reduction alone", "slug": "headcount-reduction-alone",
+        "what_it_is": "Reporting the number of support or operations roles not backfilled, or roles eliminated outright, after an AI agent went live, and treating that as the dollar value the agent produced.",
+        "breaks": [
+            "Headcount decisions usually have several causes at once, attrition, a budget freeze, a reorganization, and crediting the full reduction to the agent overstates what it actually did",
+            "It says nothing about whether the remaining team is now quietly absorbing more rework or more escalations because of gaps the agent left behind",
+            "It is a single point in time measurement that never updates, while an agent's actual performance can improve or decline every month after that headcount decision was made",
+        ],
+        "differs": "agentworth ties savings to verified resolutions and their ongoing outcomes rather than a staffing count taken once, so the reported number keeps reflecting what the agent is doing right now instead of a decision made a year earlier for a mix of reasons.",
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -473,6 +483,16 @@ GLOSSARY = [
         "term": "Vendor lock in for AI agents", "slug": "vendor-lock-in-for-ai-agents",
         "definition": "The degree to which a company's resolution data, workflows, and reporting are tied to a single AI agent vendor's platform, making it difficult or costly to switch providers or compare vendors against each other later.",
         "matters": "A heavily locked in setup makes it hard to challenge a vendor's own reported numbers, since there is no independent way to check them without first extracting data the platform was never built to export.",
+    },
+    {
+        "term": "Quality assurance scorecard", "slug": "quality-assurance-scorecard",
+        "definition": "A structured set of criteria used to score an individual support interaction, usually covering whether the information given was accurate, whether policy was followed, and whether the tone matched what the situation called for.",
+        "matters": "An AI agent program that only tracks resolution rate can look healthy while quietly failing most of the dimensions a quality scorecard would catch, since a conversation can end in a technical resolution and still be wrong, rude, or off policy.",
+    },
+    {
+        "term": "Agent confidence score", "slug": "agent-confidence-score",
+        "definition": "An internal probability or score an AI agent assigns to its own answer before deciding whether to respond directly or hand the conversation to a human.",
+        "matters": "The threshold behind this score is a tuning choice, not a measure of accuracy on its own, set it too conservatively and false escalations climb, set it too aggressively and the agent starts delivering wrong answers with full confidence, so reporting the score itself as an ROI metric tells you almost nothing without knowing where the threshold sits.",
     },
 ]
 
@@ -601,6 +621,22 @@ COMBINATIONS = [
             ("/glossary/cost-avoidance-vs-cost-savings/", "Cost avoidance vs cost savings"),
         ],
     },
+    {
+        "name": "AI collections agent in fintech", "slug": "fintech-ai-collections-agent",
+        "intro": "A collections agent handling overdue retail accounts is one kind of system. A collections agent working inside a fintech lender or card issuer sits under fair lending and debt collection rules that govern exactly what can be said, how often, and through which channel, and that changes what a good resolution actually looks like.",
+        "bullets": [
+            "A payment plan the agent talked a customer into that gets reversed or disputed within the week was never a real recovery, even though it closed the conversation as resolved that day",
+            "Communication frequency and channel limits mean a technically correct reminder sent at the wrong time or too often can turn into a complaint that costs far more than the balance it was chasing",
+            "Recovery rate on its own hides whether the agent is reaching people earlier in the delinquency cycle, when recovery is cheap, or only catching the harder, later stage accounts where recovery was always going to be expensive",
+        ],
+        "closing": "agentworth ties this combination's resolutions to whether a payment plan actually held and whether contact rules were followed, not just whether the balance was eventually paid, so the ROI case for a fintech collections agent survives a compliance review as well as a finance one.",
+        "related": [
+            ("/roi-for/fintech/", "AI agent ROI for Fintech"),
+            ("/use-cases/ai-collections-agent/", "Proving ROI for an AI collections agent"),
+            ("/glossary/false-escalation/", "False escalation"),
+            ("/compare/customer-satisfaction-scores/", "agentworth vs Customer satisfaction scores"),
+        ],
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -665,6 +701,25 @@ FAQS = [
             ("/compare/vanity-metrics/", "agentworth vs Vanity metrics like tickets closed"),
         ],
         "meta": "A direct answer to what should count as a resolution when measuring AI agent ROI, and why closed ticket counts overstate the real number.",
+    },
+    {
+        "question": "Should AI agent ROI include the cost of failed deployments?",
+        "slug": "cost-of-failed-deployments",
+        "subhead": "At the company level, yes, even though that cost will never show up in the ROI of the one agent that finally worked.",
+        "body": """
+  <h2>Short answer</h2>
+  <p>If you are asking whether a single agent's own ROI number should be penalized for a different, earlier attempt that was scrapped, the answer is no, that number should reflect what this agent is actually doing today. But if you are asking whether the company should count that earlier failed attempt somewhere when deciding whether the overall AI agent program has paid off, the answer is yes, and most teams quietly skip this step.</p>
+  <h2>Why it still belongs in the bigger picture</h2>
+  <p>A failed deployment is rarely free. There is the platform cost paid before it was scrapped, the engineering and operations time spent integrating and then unwinding it, and the support team's time spent working around an agent that was not yet reliable. None of that disappears just because the project ended before producing a usable resolution number.</p>
+  <p>Treating each new deployment attempt as a clean slate makes the program as a whole look better than it has actually been, since the cost of the attempts that did not work never gets weighed against the savings of the one that did. A company level view should add up every attempt, successful or not, against the total savings delivered so far, while each individual agent's reported ROI stays focused on what that agent is doing right now.</p>
+""",
+        "related": [
+            ("/glossary/payback-period/", "Payback period for AI agents"),
+            ("/glossary/build-versus-buy-for-ai-agents/", "Build versus buy for AI agents"),
+            ("/compare/building-it-in-house/", "agentworth vs Building it in house"),
+            ("/glossary/verified-roi-vs-estimated-roi/", "Verified ROI vs estimated ROI"),
+        ],
+        "meta": "A direct answer on whether the cost of a scrapped or failed AI agent deployment should count against the program's AI agent ROI.",
     },
 ]
 
