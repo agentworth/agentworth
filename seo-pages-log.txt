@@ -72,3 +72,10 @@ GLOSSARY: agent-confidence-score (2026-10-25)
 COMPARE: headcount-reduction-alone (2026-10-25)
 USE-CASES: fintech-ai-collections-agent (2026-10-25)
 FAQ: cost-of-failed-deployments (2026-10-25)
+
+# --- 2026-10-26: daily programmatic SEO run ---
+USE-CASES: healthcare-ai-scheduling-agent (2026-10-26)
+USE-CASES: saas-ai-onboarding-agent (2026-10-26)
+GLOSSARY: average-handle-time (2026-10-26)
+COMPARE: ab-testing-agent-versions (2026-10-26)
+FAQ: llm-api-costs-in-ai-agent-roi (2026-10-26)

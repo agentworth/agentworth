@@ -373,6 +373,16 @@ COMPARISONS = [
         ],
         "differs": "agentworth ties savings to verified resolutions and their ongoing outcomes rather than a staffing count taken once, so the reported number keeps reflecting what the agent is doing right now instead of a decision made a year earlier for a mix of reasons.",
     },
+    {
+        "topic": "A/B testing agent versions without a shared ROI baseline", "slug": "ab-testing-agent-versions",
+        "what_it_is": "Running two versions of an AI agent side by side and declaring whichever one shows a higher resolution or containment rate the winner, without first agreeing on what a dollar of value from either version actually looks like.",
+        "breaks": [
+            "A resolution rate comparison between two versions says nothing about which one is actually cheaper or more accurate if the two versions are not being measured against the same definition of a resolution",
+            "A version that resolves more conversations by being more willing to close uncertain cases can look like the winner on paper while quietly producing more repeat contacts than the version it replaced",
+            "Running the test for too short a window lets whichever version happened to handle an easier slice of traffic that week look better than it actually is",
+        ],
+        "differs": "agentworth applies the same verified ROI calculation to every version being tested, so a test between two agent configurations compares what each one was actually worth, not just which one closed more conversations during the test window.",
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -493,6 +503,11 @@ GLOSSARY = [
         "term": "Agent confidence score", "slug": "agent-confidence-score",
         "definition": "An internal probability or score an AI agent assigns to its own answer before deciding whether to respond directly or hand the conversation to a human.",
         "matters": "The threshold behind this score is a tuning choice, not a measure of accuracy on its own, set it too conservatively and false escalations climb, set it too aggressively and the agent starts delivering wrong answers with full confidence, so reporting the score itself as an ROI metric tells you almost nothing without knowing where the threshold sits.",
+    },
+    {
+        "term": "Average handle time", "slug": "average-handle-time",
+        "definition": "The average length of time an agent, human or AI, spends on a single interaction from the moment it starts to the moment it is marked resolved or closed.",
+        "matters": "A falling average handle time is often presented as proof an AI agent is working well, but a faster interaction that ends in a wrong or incomplete answer costs more later than a slower one that actually solved the problem, so handle time on its own says nothing about whether the resolution held.",
     },
 ]
 
@@ -637,6 +652,38 @@ COMBINATIONS = [
             ("/compare/customer-satisfaction-scores/", "agentworth vs Customer satisfaction scores"),
         ],
     },
+    {
+        "name": "AI scheduling agent in healthcare", "slug": "healthcare-ai-scheduling-agent",
+        "intro": "A scheduling agent booking restaurant reservations is one kind of system. A scheduling agent booking patient appointments sits inside provider calendars, insurance eligibility windows, and clinical urgency rules, and that context changes what counts as a good booking.",
+        "bullets": [
+            "A booked appointment that gets cancelled once insurance eligibility turns out not to cover the visit was never really booked, and that gap rarely shows up until the claim is filed weeks later",
+            "No show reduction only counts as savings if the slot that opened back up actually got filled by another patient, otherwise the agent reduced no shows without recovering any revenue",
+            "Rescheduling a routine checkup and rescheduling a time sensitive followup carry very different costs if the delay affects a patient's care, and a flat reschedule count treats them the same",
+        ],
+        "closing": "agentworth ties this combination's bookings to whether the visit actually happened and whether the freed up slot got filled, not just whether a confirmation was sent, so the ROI case for a healthcare scheduling agent reflects filled calendars and completed visits rather than booking activity alone.",
+        "related": [
+            ("/roi-for/healthcare/", "AI agent ROI for Healthcare"),
+            ("/use-cases/ai-scheduling-agent/", "Proving ROI for an AI scheduling agent"),
+            ("/glossary/cost-avoidance-vs-cost-savings/", "Cost avoidance vs cost savings"),
+            ("/compare/headcount-reduction-alone/", "agentworth vs Headcount reduction alone"),
+        ],
+    },
+    {
+        "name": "AI onboarding agent in SaaS", "slug": "saas-ai-onboarding-agent",
+        "intro": "An onboarding agent guiding a free trial user through initial setup is one kind of system. An onboarding agent working inside a SaaS product sits upstream of activation, expansion, and renewal, and that position changes what a good onboarding resolution is actually worth.",
+        "bullets": [
+            "A completed setup step that never leads to the user reaching their first meaningful outcome in the product was not really onboarding, it was just a checklist getting ticked off",
+            "An onboarding agent that answers questions quickly but skips the configuration steps that predict long term retention looks efficient in week one and shows up as churn two quarters later",
+            "Self serve accounts and sales assisted accounts need different onboarding paths, and crediting the agent with activation on an account a customer success manager was already walking through overstates what it actually did",
+        ],
+        "closing": "agentworth ties this combination's resolutions to activation and the retention outcomes that follow, not to setup steps completed, so the ROI case for a SaaS onboarding agent reflects accounts that actually got value, not just accounts that got through a checklist.",
+        "related": [
+            ("/roi-for/saas/", "AI agent ROI for SaaS"),
+            ("/use-cases/ai-onboarding-agent/", "Proving ROI for an AI onboarding agent"),
+            ("/glossary/net-value-per-resolution/", "Net value per resolution"),
+            ("/compare/task-completion-rate-alone/", "agentworth vs Task completion rate alone"),
+        ],
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -720,6 +767,25 @@ FAQS = [
             ("/glossary/verified-roi-vs-estimated-roi/", "Verified ROI vs estimated ROI"),
         ],
         "meta": "A direct answer on whether the cost of a scrapped or failed AI agent deployment should count against the program's AI agent ROI.",
+    },
+    {
+        "question": "Does AI agent ROI include the cost of LLM API calls?",
+        "slug": "llm-api-costs-in-ai-agent-roi",
+        "subhead": "It should, and a number that only counts the subscription fee is leaving out a cost that moves with volume.",
+        "body": """
+  <h2>Short answer</h2>
+  <p>Yes. The cost of calling the underlying language model, whether that is a per token fee to a model provider or usage based pricing baked into a platform's bill, is a direct cost of running the agent and belongs in the same place as the platform subscription fee. Leaving it out understates what the agent actually costs to operate.</p>
+  <h2>Why it gets left out</h2>
+  <p>A platform's sticker price is usually a flat monthly or annual number that is easy to drop into a spreadsheet. The underlying model cost is usage based and can swing with ticket volume, conversation length, and how many times the agent calls the model to reach a single resolution, so it is harder to pin down and easier to quietly ignore. A team that compares only the subscription fee against the cost of a human agent is comparing an apples to oranges pair of numbers, since the human cost already includes everything needed to do the work.</p>
+  <p>The gap matters most at scale. A model cost that looks trivial per conversation can add up to a meaningful figure once it is multiplied across a full quarter of volume, and a sudden jump in conversation length or model calls per resolution can erode margin that a flat subscription fee view would never catch.</p>
+""",
+        "related": [
+            ("/glossary/cost-per-resolution/", "Cost per resolution"),
+            ("/glossary/net-value-per-resolution/", "Net value per resolution"),
+            ("/compare/native-reporting/", "agentworth vs Your agent platform's own native reporting"),
+            ("/glossary/verified-roi-vs-estimated-roi/", "Verified ROI vs estimated ROI"),
+        ],
+        "meta": "A direct answer on whether AI agent ROI should include the cost of LLM or model API calls, and why that cost is easy to leave out.",
     },
 ]
 
