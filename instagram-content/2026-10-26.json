@@ -1,0 +1,27 @@
+{
+  "topic": "Same agent, different ROI score",
+  "eyebrow": "CREDIT CHECK",
+  "caption": "Your AI agent is not the only thing getting credit for that resolved ticket. 👇\n\nTwo support teams can run the exact same AI agent and still get completely different ROI numbers. Not because the agent performed differently. 📊\n\nOne team built a strong knowledge base and tight macros, so every ticket it touches gets split credit between the agent and that tooling.\n\nThe other team lets the agent wing every answer alone, so it keeps full credit on paper even when the actual quality is lower.\n\nThe dashboard rewards whichever team hands out credit less carefully, not whichever team actually runs the better operation. 🧠\n\nThat is the attribution problem hiding behind most AI agent ROI slides, and it is why comparing two teams by that number alone is a trap.\n\nSave this so you have the answer ready before your next ROI review. 📌 And if your dashboard still hands the agent full credit every time, tell us in the comments. 💬\n\n#AIAgents #AIROI #CustomerSupport #SupportOps #AIStrategy #CXOps #DataDriven #TechLeadership #SaaS #BoardReporting #Attribution #Agentworth",
+  "slides": [
+    {
+      "n": 1,
+      "headline": "The Better Your Docs, The Worse Your Agent Looks",
+      "support": ""
+    },
+    {
+      "n": 2,
+      "headline": "Two Teams, Same Agent, Different ROI Numbers",
+      "support": "One dashboard splits credit. The other does not."
+    },
+    {
+      "n": 3,
+      "headline": "The Difference Is Credit, Not Quality",
+      "support": "Great documentation quietly steals the agent's spotlight."
+    },
+    {
+      "n": 4,
+      "headline": "Measure Contribution, Not Just Closure",
+      "support": "Save this before your next board review."
+    }
+  ]
+}
