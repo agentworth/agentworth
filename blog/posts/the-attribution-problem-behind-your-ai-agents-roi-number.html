@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The attribution problem behind your AI agent's ROI number · agentworth</title>
+<meta name="description" content="When a bot, a knowledge base article, and a human all touch the same ticket, most AI agent ROI numbers still credit the whole resolution to the agent, and that one assumption is often where the number stops holding up.">
+<meta property="og:image" content="https://agentworth.cloud/blog/posts/images/the-attribution-problem-behind-your-ai-agents-roi-number-hero.png">
+<meta name="twitter:image" content="https://agentworth.cloud/blog/posts/images/the-attribution-problem-behind-your-ai-agents-roi-number-hero.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --signal: #2E9BFF; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0B0C10; color: #F4F5F7; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--signal); text-decoration: none; }
+  .af-nav a { color: inherit; transition: color 0.2s ease; }
+  .af-nav a:hover { color: #F4F5F7; }
+  article h2 { font-family:'Outfit',sans-serif; font-weight:600; font-size:26px; margin:40px 0 14px; letter-spacing:-0.01em; }
+  article p { font-size:17px; line-height:1.75; color:#C7CBD1; margin:0 0 18px; }
+  article ul { margin:0 0 24px; padding-left:22px; }
+  article li { font-size:16.5px; line-height:1.7; color:#C7CBD1; margin:0 0 10px; }
+  @media (max-width: 680px) {
+    .af-pad { padding-left: 24px !important; padding-right: 24px !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="af-pad" style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:20px 48px; backdrop-filter:blur(12px); background:rgba(11,12,16,0.72); border-bottom:1px solid #1E2129">
+  <a href="/"><img src="/logo.png" alt="agentworth" style="height:22px; width:auto; display:block"></a>
+  <nav class="af-nav" style="display:flex; align-items:center; gap:36px; font-size:14px; color:#B6BBC4; flex-wrap:wrap">
+    <a href="/#how-it-works">How it works</a>
+    <a href="/#roi-calculator">ROI calculator</a>
+    <a href="/blog/" style="color:#F4F5F7">Blog</a>
+    <a href="/#contact" style="padding:10px 20px; border-radius:999px; background:var(--signal); color:#06111F; font-weight:600">Get in touch</a>
+  </nav>
+</header>
+
+<article class="af-pad" style="padding:80px 48px 120px; max-width:720px; margin:0 auto">
+  <a href="/blog/" style="font-size:14px; color:#6B7280">&larr; Back to blog</a>
+  <div style="font-size:13px; color:#6B7280; margin-top:24px">October 26, 2026</div>
+  <h1 style="font-family:'Outfit',sans-serif; font-weight:600; font-size:clamp(30px,5vw,42px); margin:12px 0 32px; letter-spacing:-0.02em">The attribution problem behind your AI agent's ROI number</h1>
+
+  <img src="images/the-attribution-problem-behind-your-ai-agents-roi-number-hero.png" alt="The attribution problem behind your AI agent's ROI number" style="width:100%; height:auto; border-radius:14px; margin:0 0 32px; display:block">
+
+  <p>A customer writes in about a billing error. The agent pulls up an account summary, finds a knowledge base article about proration, and drafts a reply. The customer pushes back once, a human support rep steps in to adjust the actual charge, and the ticket closes. At the end of the month, that ticket gets counted as one more resolution the AI agent handled.</p>
+
+  <p>It did not handle it alone. Four different things touched that ticket: the agent, a knowledge base article someone wrote months ago, a human who made the actual correction, and whatever system logged the charge in the first place. Yet almost every ROI dashboard assigns the full credit, and the full savings, to one of those four.</p>
+
+  <h2>Full credit is the default, not a choice</h2>
+  <p>Most agent platforms were not built to split credit. They were built to report whether a conversation ended without being escalated, and that binary gets quietly translated into "the agent resolved this ticket" on the ROI slide. There is rarely a deliberate decision to overstate the agent's role. It is just the only number the system knows how to produce, and nobody downstream questions it because it comes out of the same dashboard every week.</p>
+
+  <p>The effect compounds as a support operation matures. Early on, an agent handling genuinely simple, self contained requests makes full credit a reasonable approximation. As the agent gets wired into more of the workflow, pulling from a knowledge base, triggering a macro, handing off partway through a conversation, the number of tickets that were actually a team effort grows, while the reporting still treats every one of them as a solo win.</p>
+
+  <h2>Where this bites finance specifically</h2>
+  <p>Finance does not usually catch this in the number itself. They catch it when two different tools report different totals for what looks like the same work, or when a reviewed sample of "agent resolved" tickets turns out to have a human's fingerprints all over half of them. At that point the question stops being about the size of the savings and starts being about whether any of the reporting can be trusted, which is a much worse conversation to have.</p>
+
+  <p>It also quietly breaks comparisons across teams or quarters. A support org that leans more heavily on a shared knowledge base and tight macros will look like it has a weaker agent than one that lets the agent wing every answer from scratch, purely because the first org's wins get split with its own tooling while the second org's get claimed in full. That is not a difference in agent quality. It is a difference in how generously each team's dashboard assigns credit.</p>
+
+  <h2>What a defensible split actually needs</h2>
+  <p>The fix is not a smarter formula. It is a record of every system and person that touched a ticket before it closed, kept at the same level of detail as the resolution itself. With that record, credit can be split in proportion to what each party actually contributed, a knowledge base article that supplied one fact gets a small share, a human who made the final correction gets the larger one, and the agent gets exactly the piece it earned rather than a round number pulled from a closed ticket count.</p>
+
+  <p>That record also has a second use beyond fairness. The moment someone can see which tickets were true solo resolutions versus shared ones, they can ask a sharper question: is the agent's independent share growing over time, or is it just riding on top of better documentation and tighter human backup, work that was happening anyway? One of those is a case for more investment in the agent. The other is a case for crediting the people who built the scaffolding around it.</p>
+
+  <p>This is the kind of ledger agentworth's audit log keeps by default, tracking every system and handoff behind a resolution instead of collapsing it into one closed ticket, so the credit in your ROI number matches the work that actually happened. Try the <a href="/roi-calculator/">free ROI calculator</a> to see where your own number sits, or read the <a href="/ai-agent-roi-report/">full ROI report</a> for more on what a defensible AI agent ROI figure actually requires.</p>
+</article>
+
+<footer class="af-pad" style="padding:40px 48px; display:flex; align-items:center; justify-content:space-between; border-top:1px solid #181B22; flex-wrap:wrap; gap:16px; max-width:720px; margin:0 auto">
+  <a href="/"><img src="/logo.png" alt="agentworth" style="height:16px; width:auto; display:block; opacity:0.8"></a>
+  <span style="font-size:13px; color:#6B7280">&copy; 2026 agentworth. Built for teams who have to answer for their AI.</span>
+</footer>
+
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
