@@ -1,0 +1,106 @@
+{
+  "topic": "The attribution problem in AI agent ROI",
+  "eyebrow": "AI AGENT ROI",
+  "tweets": [
+    {
+      "n": 1,
+      "text": "Your AI agent did not resolve that ticket by itself. It just happens to get all the credit for it.",
+      "headline": "Your agent did not resolve that alone"
+    },
+    {
+      "n": 2,
+      "text": "A customer writes in about a billing error. The agent finds a knowledge base article, drafts a reply. A human steps in and actually fixes the charge. Ticket closes.",
+      "headline": "One ticket, four different contributors"
+    },
+    {
+      "n": 3,
+      "text": "Four things touched that ticket. The agent, the knowledge base article, the human who fixed it, and whatever system logged the charge in the first place.",
+      "headline": "The agent, the KB, the human, the system"
+    },
+    {
+      "n": 4,
+      "text": "Your ROI dashboard counts all four as one thing. A resolution the agent handled. That is the whole problem in one sentence.",
+      "headline": "Dashboards count four contributors as one"
+    },
+    {
+      "n": 5,
+      "text": "Nobody sat down and decided to inflate this number. Most agent platforms were never built to split credit between everyone who touched a ticket.",
+      "headline": "Nobody decided to inflate this number"
+    },
+    {
+      "n": 6,
+      "text": "They were built to track one thing: did the conversation end without an escalation. That yes or no quietly becomes \"the agent resolved this\" on the slide.",
+      "headline": "A yes or no becomes agent resolved"
+    },
+    {
+      "n": 7,
+      "text": "Early on this barely matters. The agent is handling simple, self contained requests, so full credit is basically true.",
+      "headline": "Full credit used to be roughly true"
+    },
+    {
+      "n": 8,
+      "text": "Then the agent gets wired deeper into the workflow. It pulls from a knowledge base, triggers a macro, hands off mid conversation to a human.",
+      "headline": "Then the agent got wired in deeper"
+    },
+    {
+      "n": 9,
+      "text": "More tickets become a team effort. The reporting keeps calling every single one of them a solo win for the agent.",
+      "headline": "Every shared win gets called a solo win"
+    },
+    {
+      "n": 10,
+      "text": "Finance rarely catches this by staring at the number. They catch it when two different tools report two different totals for what looks like the same work.",
+      "headline": "Finance catches this comparing two totals"
+    },
+    {
+      "n": 11,
+      "text": "Or when someone pulls a sample of agent resolved tickets and finds a human's fingerprints all over half of them. 👀",
+      "headline": "A sampled ticket reveals human fingerprints"
+    },
+    {
+      "n": 12,
+      "text": "At that point the conversation is not about how big the savings number is. It is about whether any of the reporting can be trusted at all.",
+      "headline": "Now trust is the question, not size"
+    },
+    {
+      "n": 13,
+      "text": "That is a much worse meeting to walk into than one where the savings number just turned out smaller than hoped.",
+      "headline": "Trust questions are worse than small numbers"
+    },
+    {
+      "n": 14,
+      "text": "It also wrecks comparisons across teams. A support org with a great knowledge base and tight macros will look like it has a weaker agent than one that lets the agent wing every answer alone.",
+      "headline": "This wrecks comparisons across teams too"
+    },
+    {
+      "n": 15,
+      "text": "That is not a difference in agent quality. It is a difference in how generously each team's dashboard hands out credit.",
+      "headline": "Not agent quality, just credit generosity"
+    },
+    {
+      "n": 16,
+      "text": "The fix is not a smarter formula bolted onto a bad input. You cannot calculate your way out of a missing record.",
+      "headline": "You cannot formula your way out of this"
+    },
+    {
+      "n": 17,
+      "text": "What you actually need is a record of every system and person that touched a ticket, kept at the same level of detail as the resolution itself. 💡",
+      "headline": "What is missing is the full record"
+    },
+    {
+      "n": 18,
+      "text": "With that record, credit splits by contribution. The knowledge base article gets a small share. The human who made the fix gets the bigger one. The agent gets exactly what it earned.",
+      "headline": "Credit split by actual contribution"
+    },
+    {
+      "n": 19,
+      "text": "Then you can ask the sharper question. Is the agent's independent share actually growing, or is it just riding on better documentation someone else built.",
+      "headline": "Ask if the agent's share is really growing"
+    },
+    {
+      "n": 20,
+      "text": "That is the ledger agentworth's audit log keeps by default, tracking every handoff behind a resolution so your ROI number credits what actually happened, not just what closed the ticket.",
+      "headline": "The ledger that tracks what actually happened"
+    }
+  ]
+}
