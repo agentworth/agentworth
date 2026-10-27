@@ -5,3 +5,4 @@
 2026-10-21: the-human-review-cost-most-ai-agent-roi-math-forgets
 2026-10-25: what-a-board-member-actually-asks-about-your-ai-agent-roi-number
 2026-10-26: the-attribution-problem-behind-your-ai-agents-roi-number
+2026-10-27: the-reopened-ticket-problem-in-ai-agent-roi-claims
