@@ -29,6 +29,7 @@
   <url><loc>https://agentworth.cloud/compare/task-completion-rate-alone/</loc></url>
   <url><loc>https://agentworth.cloud/compare/headcount-reduction-alone/</loc></url>
   <url><loc>https://agentworth.cloud/compare/ab-testing-agent-versions/</loc></url>
+  <url><loc>https://agentworth.cloud/compare/vendor-case-studies/</loc></url>
   <url><loc>https://agentworth.cloud/compare/</loc></url>
   <url><loc>https://agentworth.cloud/glossary/cost-per-resolution/</loc></url>
   <url><loc>https://agentworth.cloud/glossary/ai-agent-roi/</loc></url>
@@ -54,6 +55,8 @@
   <url><loc>https://agentworth.cloud/glossary/quality-assurance-scorecard/</loc></url>
   <url><loc>https://agentworth.cloud/glossary/agent-confidence-score/</loc></url>
   <url><loc>https://agentworth.cloud/glossary/average-handle-time/</loc></url>
+  <url><loc>https://agentworth.cloud/glossary/shadow-it-in-support/</loc></url>
+  <url><loc>https://agentworth.cloud/glossary/sla-attainment/</loc></url>
   <url><loc>https://agentworth.cloud/glossary/</loc></url>
   <url><loc>https://agentworth.cloud/use-cases/ai-support-agent/</loc></url>
   <url><loc>https://agentworth.cloud/use-cases/ai-sales-agent/</loc></url>
@@ -69,11 +72,13 @@
   <url><loc>https://agentworth.cloud/use-cases/fintech-ai-collections-agent/</loc></url>
   <url><loc>https://agentworth.cloud/use-cases/healthcare-ai-scheduling-agent/</loc></url>
   <url><loc>https://agentworth.cloud/use-cases/saas-ai-onboarding-agent/</loc></url>
+  <url><loc>https://agentworth.cloud/use-cases/logistics-and-shipping-ai-ops-triage-agent/</loc></url>
   <url><loc>https://agentworth.cloud/use-cases/</loc></url>
   <url><loc>https://agentworth.cloud/faq/escalation-review-labor-cost/</loc></url>
   <url><loc>https://agentworth.cloud/faq/time-to-see-ai-agent-roi/</loc></url>
   <url><loc>https://agentworth.cloud/faq/what-counts-as-a-resolution-for-roi-purposes/</loc></url>
   <url><loc>https://agentworth.cloud/faq/cost-of-failed-deployments/</loc></url>
   <url><loc>https://agentworth.cloud/faq/llm-api-costs-in-ai-agent-roi/</loc></url>
+  <url><loc>https://agentworth.cloud/faq/how-often-to-report-ai-agent-roi-to-the-board/</loc></url>
   <url><loc>https://agentworth.cloud/faq/</loc></url>
 </urlset>

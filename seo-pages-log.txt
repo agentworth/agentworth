@@ -79,3 +79,10 @@ USE-CASES: saas-ai-onboarding-agent (2026-10-26)
 GLOSSARY: average-handle-time (2026-10-26)
 COMPARE: ab-testing-agent-versions (2026-10-26)
 FAQ: llm-api-costs-in-ai-agent-roi (2026-10-26)
+
+# --- 2026-10-27: daily programmatic SEO run ---
+GLOSSARY: shadow-it-in-support (2026-10-27)
+GLOSSARY: sla-attainment (2026-10-27)
+COMPARE: vendor-case-studies (2026-10-27)
+USE-CASES: logistics-and-shipping-ai-ops-triage-agent (2026-10-27)
+FAQ: how-often-to-report-ai-agent-roi-to-the-board (2026-10-27)

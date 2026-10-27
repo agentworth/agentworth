@@ -383,6 +383,16 @@ COMPARISONS = [
         ],
         "differs": "agentworth applies the same verified ROI calculation to every version being tested, so a test between two agent configurations compares what each one was actually worth, not just which one closed more conversations during the test window.",
     },
+    {
+        "topic": "Vendor case studies from other customers", "slug": "vendor-case-studies",
+        "what_it_is": "A published case study or benchmark figure from a different company already running the same AI agent platform, used as a stand in for what your own program is likely to achieve.",
+        "breaks": [
+            "A case study customer's ticket mix, team structure, and starting cost per resolution are rarely close enough to yours for their percentage improvement to transfer directly to your own numbers",
+            "Vendors publish their best results, so any single case study is a sample of one taken from the high end of the outcome range, not a typical outcome",
+            "A published figure almost never shows enough of its own methodology to tell whether it was calculated the way you would calculate yours, so comparing the two numbers is comparing two different definitions wearing the same label",
+        ],
+        "differs": "agentworth calculates ROI from your own resolutions and your own cost baseline instead of borrowing someone else's outcome, so the number you report is specific to what your agent actually did, not to what a different company's agent did somewhere else.",
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -508,6 +518,16 @@ GLOSSARY = [
         "term": "Average handle time", "slug": "average-handle-time",
         "definition": "The average length of time an agent, human or AI, spends on a single interaction from the moment it starts to the moment it is marked resolved or closed.",
         "matters": "A falling average handle time is often presented as proof an AI agent is working well, but a faster interaction that ends in a wrong or incomplete answer costs more later than a slower one that actually solved the problem, so handle time on its own says nothing about whether the resolution held.",
+    },
+    {
+        "term": "Shadow IT in support", "slug": "shadow-it-in-support",
+        "definition": "Support or operations staff adopting an AI agent, browser extension, or automation tool on their own, without it going through procurement, security review, or the official system a company uses to track resolutions and cost.",
+        "matters": "An agent running outside the official reporting system can still be handling real conversations and producing real cost outcomes that never make it into the ROI number anyone is tracking, so the reported figure can be wrong in either direction without anyone noticing until a security review or an unrelated audit turns it up.",
+    },
+    {
+        "term": "SLA attainment", "slug": "sla-attainment",
+        "definition": "The percentage of support interactions that meet the specific response and resolution time commitments written into a service level agreement, measured against that agreement rather than against a general sense of how fast the team feels.",
+        "matters": "A team can report a healthy average resolution time while still missing SLA attainment on exactly the accounts that matter most, since an average quietly absorbs the slow outliers that a contract actually penalizes, which is why an AI agent program needs this tracked as its own number instead of folded into a general speed metric.",
     },
 ]
 
@@ -684,6 +704,22 @@ COMBINATIONS = [
             ("/compare/task-completion-rate-alone/", "agentworth vs Task completion rate alone"),
         ],
     },
+    {
+        "name": "AI ops or triage agent in logistics and shipping", "slug": "logistics-and-shipping-ai-ops-triage-agent",
+        "intro": "A triage agent sorting generic support requests is one kind of system. A triage agent sorting incoming shipment exceptions, delayed packages, and carrier incident reports sits inside delivery promises and the carrier contracts that back them, and that context changes what a correctly triaged case is actually worth.",
+        "bullets": [
+            "A delay correctly flagged as urgent three hours after the shipment already missed its delivery window did not actually prevent anything, even though the triage step technically happened on time",
+            "Carrier dispute routing has to point a case at the specific carrier relationship and the specific contract clause that applies, since sending it to the wrong queue can burn the limited window a contract allows for filing a claim",
+            "A spike in exception volume during a single severe weather event or a carrier network outage should not be allowed to make a normally reliable triage agent look like it suddenly got worse, the ROI math needs to separate a bad week from a bad agent",
+        ],
+        "closing": "agentworth ties this combination's triage decisions to whether the right team or carrier actually received the case in time to act on it, not just whether a priority label got applied, so the ROI case for a logistics triage agent reflects shipments actually saved and disputes actually filed on time, not routing activity alone.",
+        "related": [
+            ("/roi-for/logistics-and-shipping/", "AI agent ROI for Logistics and shipping"),
+            ("/use-cases/ai-ops-triage-agent/", "Proving ROI for an AI ops or triage agent"),
+            ("/glossary/false-escalation/", "False escalation"),
+            ("/glossary/sla-attainment/", "SLA attainment"),
+        ],
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -786,6 +822,25 @@ FAQS = [
             ("/glossary/verified-roi-vs-estimated-roi/", "Verified ROI vs estimated ROI"),
         ],
         "meta": "A direct answer on whether AI agent ROI should include the cost of LLM or model API calls, and why that cost is easy to leave out.",
+    },
+    {
+        "question": "How often should AI agent ROI be reported to the board?",
+        "slug": "how-often-to-report-ai-agent-roi-to-the-board",
+        "subhead": "Quarterly is the common rhythm, but the number behind that update should already be tracked continuously, not assembled from scratch each time.",
+        "body": """
+  <h2>Short answer</h2>
+  <p>Most finance and operations leaders settle on a quarterly cadence for a formal board update, since that matches how most other operating metrics get reported and gives enough time for a trend to actually mean something. A monthly update is common at the operational level, between the team running the agent and whoever they report to day to day, but a quarterly figure is usually what reaches the board itself.</p>
+  <h2>Why the cadence matters less than the process behind it</h2>
+  <p>The real risk is not reporting too rarely, it is building the report from scratch each time. A team that pulls a fresh export, reconciles it by hand, and recalculates the ROI figure every quarter is likely to produce a slightly different number using a slightly different method on each pass, which invites exactly the kind of scrutiny a board update is supposed to survive.</p>
+  <p>A program that calculates ROI continuously can report on whatever cadence the board actually wants, monthly, quarterly, or on demand ahead of a specific decision, because the underlying number does not change depending on when someone happens to ask for it. Cadence then becomes a reporting choice rather than a constraint set by how much manual work it takes to produce the figure.</p>
+""",
+        "related": [
+            ("/glossary/payback-period/", "Payback period for AI agents"),
+            ("/glossary/verified-roi-vs-estimated-roi/", "Verified ROI vs estimated ROI"),
+            ("/compare/quarterly-audits/", "agentworth vs Quarterly audits"),
+            ("/glossary/ticket-volume-normalization/", "Ticket volume normalization"),
+        ],
+        "meta": "A direct answer on how often AI agent ROI should reach the board, and why the reporting cadence matters less than whether the number is built the same way every time.",
     },
 ]
 
