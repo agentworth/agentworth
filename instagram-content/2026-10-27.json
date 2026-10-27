@@ -1,0 +1,27 @@
+{
+  "topic": "reopened tickets and ROI trust",
+  "eyebrow": "THE COMEBACK TICKET",
+  "caption": "A resolved ticket is not always a fixed one. \ud83d\udc40\n\nAn AI agent answers a billing question. The customer says thanks. The ticket closes. That counts as a win in the dashboard right now.\n\nThe next morning the same customer writes in again. Same account, same charge, still wrong. This time a human has to actually fix it.\n\nTwo tickets now exist for one problem. The first one is still sitting in the resolved column, exactly as it was the moment it closed. \ud83d\udcca\n\nMost ROI dashboards never catch this. They measure a moment, not an outcome. Closed and held are not the same claim. \ud83d\udca1\n\nThe fix is simple: track a held rate. Only count a ticket as resolved if the customer never has to come back within a set window.\n\nagentworth's audit log links every recontact back to the original ticket, so a resolution only counts once it actually holds. \ud83c\udfaf\n\nSave this for your next ROI review, or tag someone who owns that number. \ud83d\udccc\n\n#AIagents #CustomerSupport #SupportOps #AIROI #SaaS #CustomerExperience #FinOps #TechLeadership #AIinBusiness #DataDriven #HelpDesk #StartupLife",
+  "slides": [
+    {
+      "n": 1,
+      "headline": "Closed today. Back tomorrow. Still broken.",
+      "support": ""
+    },
+    {
+      "n": 2,
+      "headline": "Your dashboard can't see the comeback",
+      "support": "A closed ticket and a fixed one look identical to it."
+    },
+    {
+      "n": 3,
+      "headline": "Track what held, not what closed",
+      "support": "A resolution only counts if the customer never comes back."
+    },
+    {
+      "n": 4,
+      "headline": "Resolved should mean it stayed fixed",
+      "support": "Save this before your next ROI review."
+    }
+  ]
+}
