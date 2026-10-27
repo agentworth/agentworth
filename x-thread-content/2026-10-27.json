@@ -1,0 +1,106 @@
+{
+  "topic": "The reopened ticket problem in AI agent ROI",
+  "eyebrow": "THE HELD RATE",
+  "tweets": [
+    {
+      "n": 1,
+      "text": "Your AI agent's resolution rate might be lying to you. Not on purpose. It just can't see what happens after the ticket closes.",
+      "headline": "Your resolution rate might be lying"
+    },
+    {
+      "n": 2,
+      "text": "Agent answers a billing question. Customer says thanks. Ticket closes. That counts as a win in your dashboard right now.",
+      "headline": "A closed ticket is not a win yet"
+    },
+    {
+      "n": 3,
+      "text": "Next morning the same customer writes in again. Same account, same charge, still wrong. A human has to clean it up this time.",
+      "headline": "The customer comes back with the same problem"
+    },
+    {
+      "n": 4,
+      "text": "Two tickets exist in the system now. The first one is still sitting in the resolved column, exactly as it was the moment it closed.",
+      "headline": "Two tickets now exist for one problem"
+    },
+    {
+      "n": 5,
+      "text": "Nothing in most reporting pipelines goes back and fixes that first count. The agent keeps the credit for a problem it never actually solved.",
+      "headline": "The agent keeps credit it never earned"
+    },
+    {
+      "n": 6,
+      "text": "Resolution rate measures a moment, not an outcome. It tells you a chat ended without an escalation flag. It does not tell you if the fix held.",
+      "headline": "Resolution rate measures a moment not an outcome"
+    },
+    {
+      "n": 7,
+      "text": "Closed and held are not the same claim. One is about timing. The other is about truth. Most ROI dashboards only ever check the first.",
+      "headline": "Closed and held are different claims"
+    },
+    {
+      "n": 8,
+      "text": "This barely shows up for a simple agent. \"What are your hours\" rarely gets a comeback ticket because there is nothing left to get wrong.",
+      "headline": "Simple agents rarely get comeback tickets"
+    },
+    {
+      "n": 9,
+      "text": "It shows up a lot once the agent handles refunds, account changes, multi step troubleshooting. Those closed tickets look identical. Until they are not.",
+      "headline": "Complex agents close tickets that quietly reopen"
+    },
+    {
+      "n": 10,
+      "text": "Here is why nobody catches it. Most ticketing systems give a second contact a brand new ID unless someone manually links it back.",
+      "headline": "Recontacts get a brand new ticket ID"
+    },
+    {
+      "n": 11,
+      "text": "And nobody is incentivized to go looking for that link. \ud83d\udc40 The agent team sees a healthy resolution count. Support sees an ordinary new ticket.",
+      "headline": "Nobody is incentivized to find the link"
+    },
+    {
+      "n": 12,
+      "text": "Same unresolved problem, counted twice. Once as a win on the agent's scoreboard. Once as unrelated volume on somebody else's.",
+      "headline": "One problem counted as two different wins"
+    },
+    {
+      "n": 13,
+      "text": "Now the cost math breaks too. The first pass gets logged at the agent's cheap cost per ticket.",
+      "headline": "The first pass logs an artificially cheap cost"
+    },
+    {
+      "n": 14,
+      "text": "The second pass, the one a person actually has to fix, gets logged under regular support cost with zero reference back to the agent.",
+      "headline": "The real fix cost gets buried elsewhere"
+    },
+    {
+      "n": 15,
+      "text": "So the ROI number does two bad things at once. It overstates what the agent fixed. And it understates what fixing it for real actually cost. \ud83d\udcca",
+      "headline": "Your ROI number is wrong twice over"
+    },
+    {
+      "n": 16,
+      "text": "The fix is a held rate, not a closed rate. Link any repeat contact on the same issue within a window, say 72 hours, back to the original.",
+      "headline": "Track a held rate not a closed rate"
+    },
+    {
+      "n": 17,
+      "text": "Only count the original as resolved if nothing bounced back in that window. Simple rule. Almost nobody applies it today.",
+      "headline": "Only count it resolved if nothing bounces back"
+    },
+    {
+      "n": 18,
+      "text": "This is also a quality signal, not just a finance one. A held rate that stays steady as volume grows means a genuinely dependable agent.",
+      "headline": "A held rate reveals real agent quality"
+    },
+    {
+      "n": 19,
+      "text": "A closed rate that stays flat while the held rate quietly drifts down is an early warning, long before it shows up in a satisfaction score. \ud83c\udfaf",
+      "headline": "Quality decay shows up here first"
+    },
+    {
+      "n": 20,
+      "text": "We built agentworth's audit log to catch exactly this: every recontact linked back to the original, so a resolution only counts once it holds. Worth checking if yours does.",
+      "headline": "Check if your ROI number actually holds"
+    }
+  ]
+}
