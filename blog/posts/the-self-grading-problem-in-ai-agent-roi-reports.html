@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The self grading problem in AI agent ROI reports · agentworth</title>
+<meta name="description" content="When the tool running the AI agent is also the one reporting on its own savings, the ROI number it hands finance is grading its own homework, and that is worth noticing before anyone signs off on it.">
+<meta property="og:image" content="https://agentworth.cloud/blog/posts/images/the-self-grading-problem-in-ai-agent-roi-reports-hero.png">
+<meta name="twitter:image" content="https://agentworth.cloud/blog/posts/images/the-self-grading-problem-in-ai-agent-roi-reports-hero.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --signal: #2E9BFF; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0B0C10; color: #F4F5F7; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--signal); text-decoration: none; }
+  .af-nav a { color: inherit; transition: color 0.2s ease; }
+  .af-nav a:hover { color: #F4F5F7; }
+  article h2 { font-family:'Outfit',sans-serif; font-weight:600; font-size:26px; margin:40px 0 14px; letter-spacing:-0.01em; }
+  article p { font-size:17px; line-height:1.75; color:#C7CBD1; margin:0 0 18px; }
+  article ul { margin:0 0 24px; padding-left:22px; }
+  article li { font-size:16.5px; line-height:1.7; color:#C7CBD1; margin:0 0 10px; }
+  @media (max-width: 680px) {
+    .af-pad { padding-left: 24px !important; padding-right: 24px !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="af-pad" style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:20px 48px; backdrop-filter:blur(12px); background:rgba(11,12,16,0.72); border-bottom:1px solid #1E2129">
+  <a href="/"><img src="/logo.png" alt="agentworth" style="height:22px; width:auto; display:block"></a>
+  <nav class="af-nav" style="display:flex; align-items:center; gap:36px; font-size:14px; color:#B6BBC4; flex-wrap:wrap">
+    <a href="/#how-it-works">How it works</a>
+    <a href="/#roi-calculator">ROI calculator</a>
+    <a href="/blog/" style="color:#F4F5F7">Blog</a>
+    <a href="/#contact" style="padding:10px 20px; border-radius:999px; background:var(--signal); color:#06111F; font-weight:600">Get in touch</a>
+  </nav>
+</header>
+
+<article class="af-pad" style="padding:80px 48px 120px; max-width:720px; margin:0 auto">
+  <a href="/blog/" style="font-size:14px; color:#6B7280">&larr; Back to blog</a>
+  <div style="font-size:13px; color:#6B7280; margin-top:24px">October 28, 2026</div>
+  <h1 style="font-family:'Outfit',sans-serif; font-weight:600; font-size:clamp(30px,5vw,42px); margin:12px 0 32px; letter-spacing:-0.02em">The self grading problem in AI agent ROI reports</h1>
+
+  <img src="images/the-self-grading-problem-in-ai-agent-roi-reports-hero.png" alt="The self grading problem in AI agent ROI reports" style="width:100%; height:auto; border-radius:14px; margin:0 0 32px; display:block">
+
+  <p>Open the slide. Ninety one percent resolution rate, forty percent cost reduction, a number at the bottom that makes the whole deck look like it was worth building. Now ask one question before anyone signs off on it. Who ran the test, and who graded it.</p>
+
+  <p>In most AI agent rollouts, the answer is the same company. The platform that runs the agent is also the platform that counts the tickets it closed, decides which ones count as resolved, and hands finance a percentage with no raw data attached. That is not a scandal. It is just a structural fact about how most ROI numbers get made, and it is worth naming plainly before the number goes in front of a board.</p>
+
+  <h2>Who actually wrote the number you are looking at</h2>
+  <p>Ask three questions about any AI agent savings figure before you trust it. Who decided what counts as a successful resolution. Who has access to the raw session logs behind the summary. And who benefits if the number comes out higher. When the same vendor answers all three, the number is not false, but it is not independent either, and those are very different things to hand to someone who has to defend it in a budget review.</p>
+
+  <p>Most vendors are not hiding anything on purpose. Their dashboard genuinely reflects how their system sees its own work. The trouble is definitional, not dishonest. A platform that scores its own deflection rate gets to pick the easiest honest definition of success, and over a few release cycles that definition tends to drift toward whichever one produces the better looking chart.</p>
+
+  <h2>Why self graded numbers drift in one direction</h2>
+  <p>Nobody sets out to inflate a metric. It happens through a hundred small, reasonable seeming choices. Counting a ticket as resolved the moment the agent stops responding, before anyone confirms the customer is actually satisfied. Measuring against tickets routed to the agent rather than total support volume, which quietly shrinks the denominator. Treating a human correction as a successful handoff rather than a failure the agent should be charged for. Each choice is defensible on its own. Stacked together, they move the number in exactly one direction, and nobody inside the system doing the counting has a reason to notice.</p>
+
+  <p>This is the same reason audited financial statements exist at all. Not because every company lies about its revenue, but because a number that grades its own homework will drift toward looking good even when everyone involved is acting in good faith. Finance does not ask for an outside audit because it suspects fraud. It asks because self assessment has a built in direction of error, and that direction is always flattering.</p>
+
+  <h2>What an independent reading actually requires</h2>
+  <p>A verified ROI number needs three things a vendor dashboard rarely offers on its own. A definition of resolved that was fixed before the measurement period started, not adjusted afterward to match whatever happened. Access to the underlying session log, not just the rolled up percentage, so someone outside the vendor can spot check the claim. And a record of what changed in the methodology between quarters, so a jump in the number can be traced to better performance instead of a quieter definition change.</p>
+
+  <p>None of this requires distrust of the team running the agent. It requires treating the ROI number the same way finance already treats every other figure that ends up on a board slide, as something that needs a source trail, not just a headline. That is the gap agentworth's audit log is built to close, keeping an independent record of what the agent actually did so the savings number does not depend on the agent's own account of itself. Try the <a href="/roi-calculator/">free ROI calculator</a> to see what an independently counted number looks like for your own numbers, or read the <a href="/ai-agent-roi-report/">full ROI report</a> for more on what a defensible figure actually requires.</p>
+</article>
+
+<footer class="af-pad" style="padding:40px 48px; display:flex; align-items:center; justify-content:space-between; border-top:1px solid #181B22; flex-wrap:wrap; gap:16px; max-width:720px; margin:0 auto">
+  <a href="/"><img src="/logo.png" alt="agentworth" style="height:16px; width:auto; display:block; opacity:0.8"></a>
+  <span style="font-size:13px; color:#6B7280">&copy; 2026 agentworth. Built for teams who have to answer for their AI.</span>
+</footer>
+
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
