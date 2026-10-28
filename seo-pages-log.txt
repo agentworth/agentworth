@@ -86,3 +86,10 @@ GLOSSARY: sla-attainment (2026-10-27)
 COMPARE: vendor-case-studies (2026-10-27)
 USE-CASES: logistics-and-shipping-ai-ops-triage-agent (2026-10-27)
 FAQ: how-often-to-report-ai-agent-roi-to-the-board (2026-10-27)
+
+# --- 2026-10-28: daily programmatic SEO run ---
+GLOSSARY: ticket-backlog (2026-10-28)
+GLOSSARY: silent-failure (2026-10-28)
+COMPARE: engagement-metrics-alone (2026-10-28)
+USE-CASES: real-estate-ai-sales-agent (2026-10-28)
+FAQ: what-is-a-good-roi-percentage-for-an-ai-agent (2026-10-28)

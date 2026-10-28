@@ -393,6 +393,16 @@ COMPARISONS = [
         ],
         "differs": "agentworth calculates ROI from your own resolutions and your own cost baseline instead of borrowing someone else's outcome, so the number you report is specific to what your agent actually did, not to what a different company's agent did somewhere else.",
     },
+    {
+        "topic": "Engagement metrics like session length or messages per conversation", "slug": "engagement-metrics-alone",
+        "what_it_is": "Reporting how long a conversation with an AI agent ran, or how many messages it took to get through it, as a stand in for whether the agent is actually doing a good job.",
+        "breaks": [
+            "A longer conversation can mean the agent is working through a genuinely complex issue, or it can mean the agent is struggling and making the customer repeat themselves, and engagement metrics alone cannot tell those two apart",
+            "A short, low message count conversation looks efficient on a dashboard even when it ended because the customer gave up rather than because the issue actually got solved",
+            "Session length and message count say nothing about cost or outcome, so neither one converts into a number finance can use to judge whether the agent is worth what it costs to run",
+        ],
+        "differs": "agentworth calculates ROI from the verified outcome and cost of each resolution rather than from how long or how chatty the conversation was, so a short conversation that solved nothing and a long conversation that solved something complex are never confused with each other.",
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -528,6 +538,16 @@ GLOSSARY = [
         "term": "SLA attainment", "slug": "sla-attainment",
         "definition": "The percentage of support interactions that meet the specific response and resolution time commitments written into a service level agreement, measured against that agreement rather than against a general sense of how fast the team feels.",
         "matters": "A team can report a healthy average resolution time while still missing SLA attainment on exactly the accounts that matter most, since an average quietly absorbs the slow outliers that a contract actually penalizes, which is why an AI agent program needs this tracked as its own number instead of folded into a general speed metric.",
+    },
+    {
+        "term": "Ticket backlog", "slug": "ticket-backlog",
+        "definition": "The number of support conversations sitting unresolved at a single point in time, waiting for either a human or an AI agent to pick them up, as distinct from how many conversations came in or got closed during the same period.",
+        "matters": "A shrinking queue count looks good on a dashboard, but it can shrink because an AI agent is closing cases quickly without actually solving them, just as easily as it can shrink because the agent is doing good work, so backlog size on its own cannot tell the two apart.",
+    },
+    {
+        "term": "Silent failure", "slug": "silent-failure",
+        "definition": "A resolution an AI agent marks as successfully closed that did not actually solve the customer's problem, with no error message, confidence flag, or escalation anywhere in the system to show that anything went wrong.",
+        "matters": "A silent failure is the most expensive kind of mistake an AI agent can make, because it never shows up as a flagged case for a reviewer to catch, it only shows up later as a repeat contact, a churned account, or a frustrated customer, usually long after anyone would think to go looking for it.",
     },
 ]
 
@@ -720,6 +740,22 @@ COMBINATIONS = [
             ("/glossary/sla-attainment/", "SLA attainment"),
         ],
     },
+    {
+        "name": "AI sales agent in real estate", "slug": "real-estate-ai-sales-agent",
+        "intro": "A sales agent qualifying leads for a software trial is one kind of system. A sales agent qualifying leasing inquiries and buyer interest in real estate sits inside tour schedules, listing availability, and financing qualification, and that context changes what a good qualified lead is actually worth.",
+        "bullets": [
+            "A lead the agent marks as qualified that never actually shows up for the scheduled tour was not really a qualified lead, even though the booking itself happened without any issues",
+            "Financing and affordability questions have to be answered correctly before a lead is worth passing to a leasing agent or broker, since a wrong prequalification wastes a human agent's time on someone who was never going to close",
+            "Listing availability changes constantly, and a sales agent working from a stale listing feed can qualify real interest in a unit that is no longer on the market, which costs more goodwill than the lead itself was worth",
+        ],
+        "closing": "agentworth ties this combination's qualified leads to whether the tour or showing actually happened and whether the listing was still available when the conversation occurred, not just whether the agent collected the right information, so the ROI case for a real estate sales agent reflects tours completed and applications started rather than qualification activity alone.",
+        "related": [
+            ("/roi-for/real-estate/", "AI agent ROI for Real estate"),
+            ("/use-cases/ai-sales-agent/", "Proving ROI for an AI sales agent"),
+            ("/glossary/net-value-per-resolution/", "Net value per resolution"),
+            ("/compare/task-completion-rate-alone/", "agentworth vs Task completion rate alone"),
+        ],
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -841,6 +877,25 @@ FAQS = [
             ("/glossary/ticket-volume-normalization/", "Ticket volume normalization"),
         ],
         "meta": "A direct answer on how often AI agent ROI should reach the board, and why the reporting cadence matters less than whether the number is built the same way every time.",
+    },
+    {
+        "question": "What is a good ROI percentage for an AI agent?",
+        "slug": "what-is-a-good-roi-percentage-for-an-ai-agent",
+        "subhead": "There is no universal number, and a figure that looks great on its own can still be wrong once you check how it was calculated.",
+        "body": """
+  <h2>Short answer</h2>
+  <p>There is no single percentage that counts as good across every team, since the right number depends on what the agent costs to run, what it replaced, and how that cost baseline was set in the first place. A team with a very low cost per resolution to begin with will show a smaller percentage gain than a team starting from an expensive, inefficient process, even if the second team's agent is actually doing worse work.</p>
+  <h2>Why the percentage matters less than the method behind it</h2>
+  <p>A reported return of several hundred percent sounds impressive, but it is only meaningful if the cost side of that calculation includes everything it should, the platform fee, the underlying model cost, the labor still spent reviewing escalations, and the cost of resolutions that did not actually hold. A number built from an incomplete cost picture will always look better than one built honestly, regardless of what the agent is actually doing.</p>
+  <p>Before comparing a reported ROI percentage against some benchmark, it is worth asking the more basic question first, what counts as a resolution in that calculation, and what costs were subtracted to arrive at the final number. Two teams reporting the same percentage can be describing very different realities underneath it.</p>
+""",
+        "related": [
+            ("/glossary/net-value-per-resolution/", "Net value per resolution"),
+            ("/glossary/verified-roi-vs-estimated-roi/", "Verified ROI vs estimated ROI"),
+            ("/glossary/cost-per-resolution/", "Cost per resolution"),
+            ("/compare/vanity-metrics/", "agentworth vs Vanity metrics like tickets closed"),
+        ],
+        "meta": "A direct answer on what counts as a good ROI percentage for an AI agent, and why the percentage matters less than how it was calculated.",
     },
 ]
 
