@@ -1,0 +1,27 @@
+{
+  "topic": "The three question ROI test",
+  "eyebrow": "THREE QUESTION TEST",
+  "caption": "Would your AI agent's ROI number survive three questions?\n\nMost ROI numbers come from the same company running the agent.\n\nThey decide what counts as resolved, hold the raw logs, and hand finance a percentage. 👀\n\nThat is not fraud. It is just an unaudited number dressed up as a fact.\n\nA real number survives three questions. Who decided. Who can see the logs. Who benefits. 🧠\n\nSave this before your next board review, and ask agentworth for a number with a source trail. 💡\n\nAIAgents AIROI AgentROI SupportAutomation FinOps AIAudit BoardReporting DataIntegrity CFOInsights AIStrategy TrustInAI SaaS",
+  "slides": [
+    {
+      "n": 1,
+      "headline": "Would Your AI ROI Number Survive 3 Questions",
+      "support": ""
+    },
+    {
+      "n": 2,
+      "headline": "The Same Company Counts And Grades It",
+      "support": "Your vendor decides what counts as a win."
+    },
+    {
+      "n": 3,
+      "headline": "Three Questions Separate Real From Flattering",
+      "support": "Ask who decided, who holds the logs, and who benefits."
+    },
+    {
+      "n": 4,
+      "headline": "Every ROI Number Deserves A Source Trail",
+      "support": "Save this before your next board deck."
+    }
+  ]
+}

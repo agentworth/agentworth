@@ -6,3 +6,4 @@
 2026-10-25 what-a-board-member-actually-asks-about-your-ai-agent-roi-number
 2026-10-26 the-attribution-problem-behind-your-ai-agents-roi-number
 2026-10-27 the-reopened-ticket-problem-in-ai-agent-roi-claims
+2026-10-28 the-self-grading-problem-in-ai-agent-roi-reports
