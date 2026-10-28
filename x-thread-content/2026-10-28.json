@@ -1,0 +1,106 @@
+{
+  "topic": "The self grading problem in AI agent ROI",
+  "eyebrow": "SELF GRADED ROI",
+  "tweets": [
+    {
+      "n": 1,
+      "text": "Your AI agent's ROI slide says 91 percent resolved and 40 percent cost cut. Before that goes near a board, ask one question. Who graded this number?",
+      "headline": "Who Actually Graded Your ROI Number"
+    },
+    {
+      "n": 2,
+      "text": "In most rollouts, the same company running the agent also counts what it saved. That is not a scandal. It is just how these numbers get made.",
+      "headline": "The Vendor Counts Its Own Savings"
+    },
+    {
+      "n": 3,
+      "text": "The vendor decides what counts as resolved. The vendor holds the raw logs. The vendor writes the number finance sees. No outside check in that chain.",
+      "headline": "No Outside Check In That Chain"
+    },
+    {
+      "n": 4,
+      "text": "Most vendors are not hiding anything. Their dashboard honestly reflects how the system sees its own work. The problem is definitional, not dishonest.",
+      "headline": "Honest Dashboard, Wrong Definition"
+    },
+    {
+      "n": 5,
+      "text": "But a system that scores its own homework gets to pick the easiest honest definition of success. Over a few release cycles, that definition drifts.",
+      "headline": "Self Scored Metrics Drift One Way"
+    },
+    {
+      "n": 6,
+      "text": "Nobody decides one day to inflate the metric. It happens through a hundred small, reasonable choices, each one defensible on its own.",
+      "headline": "A Hundred Small Reasonable Choices"
+    },
+    {
+      "n": 7,
+      "text": "Choice one. Count a ticket resolved the moment the agent stops responding, before anyone confirms the customer is actually satisfied.",
+      "headline": "Resolved Before Anyone Confirms Satisfaction"
+    },
+    {
+      "n": 8,
+      "text": "Choice two. Measure against tickets routed to the agent, not total support volume. That quietly shrinks the denominator.",
+      "headline": "Shrinking The Denominator Inflates The Rate"
+    },
+    {
+      "n": 9,
+      "text": "Choice three. Treat a human correction as a successful handoff instead of a failure the agent should be charged for.",
+      "headline": "Corrections Counted As Successful Handoffs"
+    },
+    {
+      "n": 10,
+      "text": "Stack all three together and the number moves in exactly one direction. Nobody doing the counting has a reason to notice. 👀",
+      "headline": "Nobody Counting Has A Reason To Notice"
+    },
+    {
+      "n": 11,
+      "text": "This is the same reason audited financial statements exist. Not because every company lies about revenue.",
+      "headline": "Why Audited Financial Statements Exist"
+    },
+    {
+      "n": 12,
+      "text": "Self assessment has a built in direction of error, and that direction is always flattering. Finance figured this out decades ago. 📊",
+      "headline": "Self Assessment Always Flatters Itself"
+    },
+    {
+      "n": 13,
+      "text": "So why does an AI agent savings number get a pass that revenue never would? It is often the biggest number on the slide.",
+      "headline": "The Biggest Number Gets No Audit"
+    },
+    {
+      "n": 14,
+      "text": "A verified number needs three things most vendor dashboards skip. First, a definition of resolved fixed before measurement starts, not after.",
+      "headline": "Fix The Definition Before You Measure"
+    },
+    {
+      "n": 15,
+      "text": "Second, access to the raw session log, not just the rolled up percentage. If nobody outside the vendor can check the claim, it is not a check.",
+      "headline": "Raw Logs Beat Rolled Up Percentages"
+    },
+    {
+      "n": 16,
+      "text": "Third, a record of what changed in the methodology between quarters. A jump should trace to better performance, not a quieter definition change.",
+      "headline": "Track What Changed Between Quarters"
+    },
+    {
+      "n": 17,
+      "text": "None of this means distrusting the team running the agent. It means treating the ROI number the way finance treats every other number on that slide.",
+      "headline": "Treat ROI Like Every Other Number"
+    },
+    {
+      "n": 18,
+      "text": "Every other figure in the deck has a source trail. The AI savings line is usually the one exception, and often the loudest number in the room. 🎯",
+      "headline": "The One Line Without A Source Trail"
+    },
+    {
+      "n": 19,
+      "text": "If your board asks who counted the resolution rate and the honest answer is the vendor who built the product, that is the gap to close.",
+      "headline": "Ask Who Actually Counted The Resolution"
+    },
+    {
+      "n": 20,
+      "text": "That is exactly why we built agentworth. An independent audit log of what your agent actually did, so the ROI number does not grade its own homework. 💡",
+      "headline": "An Independent Audit Log For Agents"
+    }
+  ]
+}
