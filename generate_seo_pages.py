@@ -403,6 +403,16 @@ COMPARISONS = [
         ],
         "differs": "agentworth calculates ROI from the verified outcome and cost of each resolution rather than from how long or how chatty the conversation was, so a short conversation that solved nothing and a long conversation that solved something complex are never confused with each other.",
     },
+    {
+        "topic": "Average handle time alone", "slug": "average-handle-time-alone",
+        "what_it_is": "Reporting how quickly an AI agent gets through a conversation, from first message to close, as a stand in for whether the agent is doing a good job.",
+        "breaks": [
+            "A fast handle time can mean the agent solved the issue efficiently, or it can mean the agent closed the conversation before the issue was actually fixed, and handle time alone cannot tell those two apart",
+            "A longer conversation that correctly worked through a genuinely complicated issue looks worse on a handle time chart than a short conversation that gave the customer a wrong answer and sent them away",
+            "Handle time has no concept of cost or outcome built into it, so it cannot be converted into a number finance can use to decide whether the agent is worth what it costs to run",
+        ],
+        "differs": "agentworth calculates ROI from the verified outcome and cost of each resolution rather than from how long the conversation took to close, so a fast conversation that never actually solved anything and a slower conversation that solved something difficult are judged on what they accomplished, not on the clock.",
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -548,6 +558,16 @@ GLOSSARY = [
         "term": "Silent failure", "slug": "silent-failure",
         "definition": "A resolution an AI agent marks as successfully closed that did not actually solve the customer's problem, with no error message, confidence flag, or escalation anywhere in the system to show that anything went wrong.",
         "matters": "A silent failure is the most expensive kind of mistake an AI agent can make, because it never shows up as a flagged case for a reviewer to catch, it only shows up later as a repeat contact, a churned account, or a frustrated customer, usually long after anyone would think to go looking for it.",
+    },
+    {
+        "term": "Agent utilization rate", "slug": "agent-utilization-rate",
+        "definition": "The share of an AI agent's available capacity spent on conversations that actually reach a resolution, as opposed to idle time, retries, or conversations that end without one.",
+        "matters": "A high utilization number can describe an agent that stays constantly busy without being effective, since retries and abandoned conversations both use up capacity without producing a resolution worth counting toward ROI, so utilization needs to be read alongside resolution rate rather than on its own.",
+    },
+    {
+        "term": "Cost center vs profit center framing", "slug": "cost-center-vs-profit-center-framing",
+        "definition": "Whether an AI agent program gets evaluated as an expense to be minimized, the way a cost center is judged, or as an investment expected to produce a return, the way a profit center is judged.",
+        "matters": "The framing a finance team picks changes which questions get asked about the program. A cost center framing rewards cutting the agent's own spend, even if that means a cheaper setup that resolves less, while a profit center framing asks whether the net value produced is growing, which can justify spending more on the agent when the resolutions it produces are worth more than they cost.",
     },
 ]
 
@@ -756,6 +776,22 @@ COMBINATIONS = [
             ("/compare/task-completion-rate-alone/", "agentworth vs Task completion rate alone"),
         ],
     },
+    {
+        "name": "AI ops or triage agent in telecom", "slug": "telecom-ai-ops-triage-agent",
+        "intro": "A triage agent sorting generic internal requests is one kind of system. A triage agent sorting incoming telecom outage reports, billing escalations, and field technician dispatch requests sits inside customer SLA commitments and network restoration timelines, and that context changes what a correctly triaged case is actually worth.",
+        "bullets": [
+            "A case flagged urgent after an outage has already cascaded to a wider service area did not actually help, even though the flag itself was technically correct",
+            "Billing escalations and network outage reports need to route to completely different teams with completely different urgency models, and a triage agent that treats them on the same priority scale will misroute the one that actually has a ticking SLA clock",
+            "A single regional outage can flood the queue with hundreds of reports of the same root issue, and the ROI math needs to recognize duplicate reports instead of crediting the agent with resolving hundreds of separate cases",
+        ],
+        "closing": "agentworth ties this combination's triage decisions to whether the right technician or team received the case while the SLA clock still had room left, and collapses duplicate reports of the same outage into one tracked incident, so the ROI case for a telecom triage agent reflects outages actually addressed on time, not raw ticket volume routed.",
+        "related": [
+            ("/roi-for/telecom/", "AI agent ROI for Telecom"),
+            ("/use-cases/ai-ops-triage-agent/", "Proving ROI for an AI ops or triage agent"),
+            ("/glossary/sla-attainment/", "SLA attainment"),
+            ("/glossary/false-escalation/", "False escalation"),
+        ],
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -896,6 +932,25 @@ FAQS = [
             ("/compare/vanity-metrics/", "agentworth vs Vanity metrics like tickets closed"),
         ],
         "meta": "A direct answer on what counts as a good ROI percentage for an AI agent, and why the percentage matters less than how it was calculated.",
+    },
+    {
+        "question": "Can AI agent ROI be negative, and what does that actually mean?",
+        "slug": "can-ai-agent-roi-be-negative",
+        "subhead": "Yes, and a negative number is sometimes more trustworthy than a positive one that was calculated carelessly.",
+        "body": """
+  <h2>Short answer</h2>
+  <p>Yes. If the agent's cost, including the platform fee, the cost of the human review it still requires, and the cost of resolutions that did not actually hold, adds up to more than the value of what it resolved, the ROI number is negative. That is a real possible outcome, not a sign the calculation went wrong.</p>
+  <h2>Why a negative number can be the honest one</h2>
+  <p>Most of the pressure on an ROI report runs in one direction, toward a positive number that justifies the program. A team under that pressure can get there by leaving out a cost category, counting a resolution that did not really hold, or picking a generous baseline for what a human would have cost to do the same work. A negative number that survives an honest accounting of every cost is more trustworthy than a positive one built on a few convenient omissions.</p>
+  <p>A negative ROI is also not necessarily a verdict on the agent itself. It can mean the agent is still early in its rollout, that escalation volume has not yet settled down, or that the use case it was pointed at was simply too hard for the agent in its current state. The honest next step is to look at which part of the calculation is driving the negative number, not to adjust the calculation until it turns positive.</p>
+""",
+        "related": [
+            ("/glossary/net-value-per-resolution/", "Net value per resolution"),
+            ("/glossary/verified-roi-vs-estimated-roi/", "Verified ROI vs estimated ROI"),
+            ("/glossary/payback-period/", "Payback period for AI agents"),
+            ("/compare/vanity-metrics/", "agentworth vs Vanity metrics like tickets closed"),
+        ],
+        "meta": "A direct answer on whether AI agent ROI can be negative, why that can still be the honest number, and what it actually indicates about the program.",
     },
 ]
 

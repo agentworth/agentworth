@@ -93,3 +93,10 @@ GLOSSARY: silent-failure (2026-10-28)
 COMPARE: engagement-metrics-alone (2026-10-28)
 USE-CASES: real-estate-ai-sales-agent (2026-10-28)
 FAQ: what-is-a-good-roi-percentage-for-an-ai-agent (2026-10-28)
+
+# --- 2026-10-29: daily programmatic SEO run ---
+GLOSSARY: agent-utilization-rate (2026-10-29)
+GLOSSARY: cost-center-vs-profit-center-framing (2026-10-29)
+COMPARE: average-handle-time-alone (2026-10-29)
+USE-CASES: telecom-ai-ops-triage-agent (2026-10-29)
+FAQ: can-ai-agent-roi-be-negative (2026-10-29)
