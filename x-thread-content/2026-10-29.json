@@ -1,0 +1,106 @@
+{
+  "topic": "hours saved vs dollars saved",
+  "eyebrow": "AI AGENT ROI",
+  "tweets": [
+    {
+      "n": 1,
+      "text": "Support leader tells finance the AI agent freed up 40 hours a week. Multiply by the loaded rate, there's a clean dollar number for the slide. Almost none of it is real. \ud83d\udc40",
+      "headline": "Almost none of that savings number is real"
+    },
+    {
+      "n": 2,
+      "text": "Nobody in that chain is lying. They just skipped the one question that actually matters.",
+      "headline": "They skipped the one question that matters"
+    },
+    {
+      "n": 3,
+      "text": "An hour of freed time is not automatically an hour of saved money. It only becomes money in one of three ways.",
+      "headline": "Freed time is not automatically saved money"
+    },
+    {
+      "n": 4,
+      "text": "Way one. The freed hour gets used on real work that used to go undone or get outsourced. Escalations, outreach, account reviews. Something with its own measurable value.",
+      "headline": "Real work gives freed hours real value"
+    },
+    {
+      "n": 5,
+      "text": "Way two. The company avoids a hire or skips renewing a contractor. That is a real, checkable drop in planned spend.",
+      "headline": "Avoiding a hire is a real saving"
+    },
+    {
+      "n": 6,
+      "text": "Way three, and this is the common one. The hour just evaporates into slack. The team feels less rushed. Nothing on the org chart moves. No invoice gets smaller.",
+      "headline": "Most freed hours just evaporate into slack"
+    },
+    {
+      "n": 7,
+      "text": "Only the first two belong in a savings column. The third is a genuinely nice outcome. It is just not a dollar figure.",
+      "headline": "Relief is not the same as revenue"
+    },
+    {
+      "n": 8,
+      "text": "Treating relief like revenue is how an honest ROI slide quietly turns into fiction that everyone in the room is too polite to question.",
+      "headline": "An honest slide can still become fiction"
+    },
+    {
+      "n": 9,
+      "text": "Here is why the dashboard cannot sort this out on its own. It sees ticket volume and time per ticket. That is it.",
+      "headline": "The dashboard only sees tickets and time"
+    },
+    {
+      "n": 10,
+      "text": "It has zero visibility into your staffing plan, your hiring pipeline, or what a support rep actually did with twenty extra minutes in their day.",
+      "headline": "No visibility into your staffing plan"
+    },
+    {
+      "n": 11,
+      "text": "\ud83d\udcca So the dashboard does the only thing it can. Report the hours, apply a blended rate, and leave the hard question for someone downstream.",
+      "headline": "It reports hours and skips the hard part"
+    },
+    {
+      "n": 12,
+      "text": "That someone downstream usually skips it too. That gap is exactly where an inflated ROI number is born.",
+      "headline": "Inflated ROI numbers are born in that gap"
+    },
+    {
+      "n": 13,
+      "text": "Here is the one question that kills most of this inflation before it reaches a board deck. What did we actually do with the freed time.",
+      "headline": "One question kills most ROI inflation"
+    },
+    {
+      "n": 14,
+      "text": "A real answer is specific. We moved two reps to churn outreach, here is what that produced. We held headcount flat through a growth quarter.",
+      "headline": "A real answer names something concrete"
+    },
+    {
+      "n": 15,
+      "text": "A vague answer is a different kind of true. The team has more breathing room now. That is a fine outcome. It belongs in an engagement survey, not a savings column.",
+      "headline": "Breathing room belongs in a survey, not savings"
+    },
+    {
+      "n": 16,
+      "text": "This test costs nothing to run and it almost always shrinks the number. A smaller number that survives the question beats a bigger one that cannot.",
+      "headline": "A smaller defensible number beats a bigger one"
+    },
+    {
+      "n": 17,
+      "text": "\ud83d\udca1 Finance teams that have sat through enough vendor pitches already discount any savings figure that cannot answer this. Ask it yourself before they do.",
+      "headline": "Finance already discounts numbers that dodge this"
+    },
+    {
+      "n": 18,
+      "text": "A defensible ROI number traces every claimed hour to an actual change in cost, headcount, or output. Not just a drop in time per ticket.",
+      "headline": "Trace every saved hour to real spend"
+    },
+    {
+      "n": 19,
+      "text": "That means keeping a record of what the freed capacity was used for, right next to the record of what the agent resolved, so one can be checked against the other.",
+      "headline": "Pair freed capacity against what got resolved"
+    },
+    {
+      "n": 20,
+      "text": "That pairing is the audit trail agentworth keeps underneath the headline number. So the figure finance signs off on is tied to something that actually happened, not something that was merely freed up. \u2705",
+      "headline": "Tied to what happened, not what was freed"
+    }
+  ]
+}
