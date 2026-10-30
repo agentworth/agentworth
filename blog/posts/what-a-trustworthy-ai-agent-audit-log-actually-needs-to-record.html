@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What a trustworthy AI agent audit log actually needs to record · agentworth</title>
+<meta name="description" content="Most AI agent audit logs prove the agent was busy, not that it was right, and the difference is exactly what a defensible ROI number depends on.">
+<meta property="og:image" content="https://agentworth.cloud/blog/posts/images/what-a-trustworthy-ai-agent-audit-log-actually-needs-to-record-hero.png">
+<meta name="twitter:image" content="https://agentworth.cloud/blog/posts/images/what-a-trustworthy-ai-agent-audit-log-actually-needs-to-record-hero.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --signal: #2E9BFF; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0B0C10; color: #F4F5F7; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--signal); text-decoration: none; }
+  .af-nav a { color: inherit; transition: color 0.2s ease; }
+  .af-nav a:hover { color: #F4F5F7; }
+  article h2 { font-family:'Outfit',sans-serif; font-weight:600; font-size:26px; margin:40px 0 14px; letter-spacing:-0.01em; }
+  article p { font-size:17px; line-height:1.75; color:#C7CBD1; margin:0 0 18px; }
+  article ul { margin:0 0 24px; padding-left:22px; }
+  article li { font-size:16.5px; line-height:1.7; color:#C7CBD1; margin:0 0 10px; }
+  @media (max-width: 680px) {
+    .af-pad { padding-left: 24px !important; padding-right: 24px !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="af-pad" style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:20px 48px; backdrop-filter:blur(12px); background:rgba(11,12,16,0.72); border-bottom:1px solid #1E2129">
+  <a href="/"><img src="/logo.png" alt="agentworth" style="height:22px; width:auto; display:block"></a>
+  <nav class="af-nav" style="display:flex; align-items:center; gap:36px; font-size:14px; color:#B6BBC4; flex-wrap:wrap">
+    <a href="/#how-it-works">How it works</a>
+    <a href="/#roi-calculator">ROI calculator</a>
+    <a href="/blog/" style="color:#F4F5F7">Blog</a>
+    <a href="/#contact" style="padding:10px 20px; border-radius:999px; background:var(--signal); color:#06111F; font-weight:600">Get in touch</a>
+  </nav>
+</header>
+
+<article class="af-pad" style="padding:80px 48px 120px; max-width:720px; margin:0 auto">
+  <a href="/blog/" style="font-size:14px; color:#6B7280">&larr; Back to blog</a>
+  <div style="font-size:13px; color:#6B7280; margin-top:24px">October 30, 2026</div>
+  <h1 style="font-family:'Outfit',sans-serif; font-weight:600; font-size:clamp(30px,5vw,42px); margin:12px 0 32px; letter-spacing:-0.02em">What a trustworthy AI agent audit log actually needs to record</h1>
+
+  <img src="images/what-a-trustworthy-ai-agent-audit-log-actually-needs-to-record-hero.png" alt="What a trustworthy AI agent audit log actually needs to record" style="width:100%; height:auto; border-radius:14px; margin:0 0 32px; display:block">
+
+  <p>Ask most teams what their AI agent's audit log actually contains, and they will describe a list of conversations, a timestamp, and maybe a tag for whether the ticket got resolved. That is an activity log. It proves the agent was busy. It does not prove the agent was right, and it will not survive someone asking a harder question about any single resolution six months from now.</p>
+
+  <p>The difference matters because an audit log is the thing a defensible ROI number eventually rests on. When a board member or a skeptical finance partner asks how you know the agent actually saved what the dashboard claims, saying every conversation got logged is not an answer. The real answer has to point at records that let someone reconstruct, case by case, what happened and why it counts as a win.</p>
+
+  <h2>What an activity log tracks and what a proof grade log records</h2>
+  <p>An activity log answers one question: did something happen. A proof grade log answers four more: what did the agent decide, what information was it working from, did a human ever touch the case afterward, and did the outcome actually hold once the customer had a chance to come back. Most AI agent platforms are built to answer the first question well because it is the easy one to instrument. The other four require deciding, in advance, what counts as evidence, and then recording it every single time, not just when someone remembers to check.</p>
+
+  <h2>The record that actually survives scrutiny</h2>
+  <p>Four pieces of evidence do most of the work. The input the agent saw, not a paraphrase of it but the actual ticket text, order data, or account state it was reasoning over. The specific action it took, including which policy or knowledge base entry it relied on, so a reviewer can tell whether that reliance was reasonable. A timestamped record of any human involvement, because a case a human partly handled is not the same case as one the agent closed alone, and crediting both the same way is how savings numbers quietly inflate. And a result check some fixed number of days later, confirming the ticket stayed closed, the refund did not get disputed, and the customer did not come back angrier. Skip any one of these four and the log can still show activity. It just cannot show proof.</p>
+
+  <h2>Why this is harder than it sounds</h2>
+  <p>None of this is difficult to log technically. What makes it hard is that it has to be decided before the agent runs, not reconstructed afterward from whatever happens to be sitting in the database. A team that only starts asking what the agent actually saw after finance questions a number is usually stuck rebuilding it from logs that were never designed to answer that question. Reconstruction after the fact is exactly where the benefit of the doubt starts going to the agent instead of to the evidence.</p>
+
+  <h2>What finance and a board actually want to see</h2>
+  <p>Nobody outside the team building the agent wants to read a raw audit log. What they want is confidence that one exists and that it would hold up if someone pulled a sample and checked it by hand. That confidence comes from being able to say, for any resolution picked at random, here is what the agent saw, here is what it decided, here is whether a human was involved, and here is what happened a week later. A dashboard built on top of records like that is not reporting an estimate dressed up as a fact. It is reporting something that was actually checked.</p>
+
+  <p>That is the standard agentworth holds the audit trail underneath every ROI number to, so the figure finance signs off on is tied to a record that holds up, not just a dashboard that looks confident. Try the <a href="/roi-calculator/">free ROI calculator</a> to see how your own numbers hold up, or read the <a href="/ai-agent-roi-report/">full ROI report</a> for more on what a defensible figure actually requires.</p>
+</article>
+
+<footer class="af-pad" style="padding:40px 48px; display:flex; align-items:center; justify-content:space-between; border-top:1px solid #181B22; flex-wrap:wrap; gap:16px; max-width:720px; margin:0 auto">
+  <a href="/"><img src="/logo.png" alt="agentworth" style="height:16px; width:auto; display:block; opacity:0.8"></a>
+  <span style="font-size:13px; color:#6B7280">&copy; 2026 agentworth. Built for teams who have to answer for their AI.</span>
+</footer>
+
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
