@@ -1,0 +1,11 @@
+{
+  "topic": "The one test your AI agent's audit log needs to pass",
+  "eyebrow": "THE AUDIT TEST",
+  "caption": "Would your AI agent's audit log survive a surprise check 👀\n\nPick any resolution it closed last week.\nCould you say exactly what it saw, what it decided, and what happened after.\n\nMost teams can't. Their log just says a ticket got closed. That's activity, not proof. 💡\n\nA proof grade log tracks four things every single time: the real input, the action taken, any human help, and a result check days later. 📊\n\nSkip one of those and the log still looks full. It just can't back up the number on your dashboard.\n\nSave this and run the test on your own log before finance does. Comment TEST if you want our audit checklist. 💬\n\n#AIagents #AIAudit #AIROI #TrustInAI #AgentEconomics #CFOTools #SaaS #AIforBusiness #DataIntegrity #SupportAutomation #AIaccountability #B2BSaaS #AIstrategy",
+  "slides": [
+    {"n": 1, "headline": "Could your audit log pass this test", "support": ""},
+    {"n": 2, "headline": "Most AI agent logs only prove activity", "support": "They show a ticket closed, not that it was right."},
+    {"n": 3, "headline": "Pick one case and see what holds up", "support": "What it saw, what it decided, who helped, and what happened after."},
+    {"n": 4, "headline": "Run the test before finance does", "support": "Agentworth builds your audit trail to hold up every time."}
+  ]
+}
