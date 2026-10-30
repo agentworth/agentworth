@@ -1,0 +1,106 @@
+{
+  "topic": "What a trustworthy AI agent audit log needs to record",
+  "eyebrow": "AI AGENT ROI",
+  "tweets": [
+    {
+      "n": 1,
+      "text": "Most AI agent audit logs prove one thing. The agent was busy. They do not prove the agent was right. Those are very different claims, and only one of them survives a hard question.",
+      "headline": "Busy is not the same as right"
+    },
+    {
+      "n": 2,
+      "text": "Ask a team what is actually in their audit log and you usually get the same answer. A list of conversations, a timestamp, maybe a tag for resolved. That is an activity log, not evidence.",
+      "headline": "Most logs are activity not evidence"
+    },
+    {
+      "n": 3,
+      "text": "An activity log answers one question. Did something happen. That is it. It cannot tell you whether the thing that happened was the right call.",
+      "headline": "Activity logs answer only one question"
+    },
+    {
+      "n": 4,
+      "text": "A proof grade log answers four more questions. What did the agent decide. What information was it actually working from. Did a human touch the case afterward. Did the outcome hold once the customer could come back.",
+      "headline": "Four questions a real log must answer"
+    },
+    {
+      "n": 5,
+      "text": "Most AI agent platforms nail the first question because it is the easy one to instrument. The other four take deciding, in advance, what counts as evidence, then logging it every single time.",
+      "headline": "The easy question gets all the attention"
+    },
+    {
+      "n": 6,
+      "text": "Here is the record that actually survives scrutiny. Not a paraphrase of the ticket, the actual input the agent saw. Order data, account state, the real text, not a summary written after the fact.",
+      "headline": "Start with what the agent actually saw"
+    },
+    {
+      "n": 7,
+      "text": "Next, the specific action it took, and which policy or knowledge base entry it relied on. That is what lets a reviewer decide whether the call was reasonable, not just whether it was fast.",
+      "headline": "Reviewers need to see the reasoning"
+    },
+    {
+      "n": 8,
+      "text": "Next, a timestamped record of any human involvement. A ticket a human partly handled is not the same case as one the agent closed alone. Credit them the same way and your savings number quietly inflates.",
+      "headline": "Human help changes the whole case"
+    },
+    {
+      "n": 9,
+      "text": "Last, a result check some fixed number of days out. Did the ticket stay closed. Did the refund get disputed. Did the customer come back angrier than before. Skip this and you are grading same day, not after.",
+      "headline": "Check back days later not same day"
+    },
+    {
+      "n": 10,
+      "text": "Skip any one of those four and the log can still look full of activity. It just cannot prove anything. Those are not the same claim, and only one of them is worth putting in front of finance.",
+      "headline": "A full log is not the same as proof"
+    },
+    {
+      "n": 11,
+      "text": "None of this is hard to log technically. The hard part is deciding what to capture before the agent runs, not reconstructing it afterward from whatever happened to be sitting in a database.",
+      "headline": "Decide what to capture before launch"
+    },
+    {
+      "n": 12,
+      "text": "Teams that only start asking what the agent actually saw after finance questions a number end up rebuilding evidence from logs that were never built to answer that question.",
+      "headline": "Rebuilding evidence after the fact is painful"
+    },
+    {
+      "n": 13,
+      "text": "Reconstruction after the fact has a quiet bias built in. Every gap in the record gets filled in the agent's favor, because nobody is around to argue the other side.",
+      "headline": "Gaps always get filled in the agent's favor"
+    },
+    {
+      "n": 14,
+      "text": "Nobody outside the team building the agent actually wants to read a raw audit log. What they want is confidence that one exists and would hold up if someone pulled a sample and checked it by hand.",
+      "headline": "Nobody wants to read a raw log"
+    },
+    {
+      "n": 15,
+      "text": "That confidence comes down to one test. Pick any resolution at random. Can you say what the agent saw, what it decided, whether a human was involved, and what happened a week later.",
+      "headline": "The one test every log should pass"
+    },
+    {
+      "n": 16,
+      "text": "A dashboard built on records like that is not an estimate dressed up as a fact. It is something that was actually checked, which is a completely different thing to sign your name to.",
+      "headline": "Checked is not the same as estimated"
+    },
+    {
+      "n": 17,
+      "text": "A dashboard built on activity logs alone is a confident looking guess. It feels like proof right up until someone asks about one specific resolution, and then there is nothing to point to. 👀",
+      "headline": "A confident guess until someone asks"
+    },
+    {
+      "n": 18,
+      "text": "Finance does not need to read every case. They need to know that if they picked one at random, the answer would not fall apart. That is a lower bar than most teams think, and most are not clearing it.",
+      "headline": "A lower bar than most teams think"
+    },
+    {
+      "n": 19,
+      "text": "The gap between an activity log and a proof grade one is not a nice to have. It is the entire difference between an ROI number that survives renewal and one that does not.",
+      "headline": "The gap that decides your renewal talk"
+    },
+    {
+      "n": 20,
+      "text": "This is the exact standard agentworth holds the audit trail underneath every ROI number to. Four pieces of evidence, every case, so the number finance signs off on actually holds up. 🎯",
+      "headline": "The standard behind every verified ROI number"
+    }
+  ]
+}
