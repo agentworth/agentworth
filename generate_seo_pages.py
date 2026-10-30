@@ -413,6 +413,16 @@ COMPARISONS = [
         ],
         "differs": "agentworth calculates ROI from the verified outcome and cost of each resolution rather than from how long the conversation took to close, so a fast conversation that never actually solved anything and a slower conversation that solved something difficult are judged on what they accomplished, not on the clock.",
     },
+    {
+        "topic": "Extrapolating pilot program results to a full rollout", "slug": "pilot-program-extrapolation",
+        "what_it_is": "Taking the resolution rate and cost figures from a small pilot, often run on a limited queue or a single team, and multiplying them out to predict what the AI agent will deliver once it is rolled out company wide.",
+        "breaks": [
+            "A pilot usually gets extra attention from the vendor and the internal team running it, attention that quietly disappears once the agent is handling full volume without anyone watching as closely",
+            "Pilots are often run on the easiest or most cooperative part of the queue, so the mix of issues the agent sees in the full rollout is rarely the same mix it saw during the pilot",
+            "A pilot's short time window means it rarely captures a seasonal spike, a policy change, or any of the other normal disruptions a full year of production volume eventually brings",
+        ],
+        "differs": "agentworth keeps calculating the verified ROI number as volume grows and the mix of work changes, so a rollout gets measured on what it is actually delivering at full scale instead of on a multiplier applied to a few promising weeks from a pilot.",
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -568,6 +578,16 @@ GLOSSARY = [
         "term": "Cost center vs profit center framing", "slug": "cost-center-vs-profit-center-framing",
         "definition": "Whether an AI agent program gets evaluated as an expense to be minimized, the way a cost center is judged, or as an investment expected to produce a return, the way a profit center is judged.",
         "matters": "The framing a finance team picks changes which questions get asked about the program. A cost center framing rewards cutting the agent's own spend, even if that means a cheaper setup that resolves less, while a profit center framing asks whether the net value produced is growing, which can justify spending more on the agent when the resolutions it produces are worth more than they cost.",
+    },
+    {
+        "term": "Blended agent cost", "slug": "blended-agent-cost",
+        "definition": "The average cost of handling one resolution across a mixed pool of human and AI agents working the same queue, calculated as a single combined number rather than reported separately for each.",
+        "matters": "A blended number can quietly flatter an AI agent that only gets the easy cases while the human team absorbs everything hard, or it can make an accurate AI agent look expensive if it is still being compared against a human team working a much simpler slice of the same queue. Either way, the blended figure answers a different question than the one a finance team actually needs answered, which is what the AI agent itself is contributing on its own.",
+    },
+    {
+        "term": "Resolution verification", "slug": "resolution-verification",
+        "definition": "The process of checking, after a conversation is marked closed, whether the underlying issue actually stayed solved, rather than simply confirming that the status field changed to closed.",
+        "matters": "Without verification, a closed ticket and a genuine resolution get treated as the same thing, even though a customer can come back with the identical problem days later. A program that verifies resolutions instead of trusting the closed status alone is the only kind that can tell the difference between an agent that is actually solving problems and one that is just closing tickets quickly.",
     },
 ]
 
@@ -792,6 +812,22 @@ COMBINATIONS = [
             ("/glossary/false-escalation/", "False escalation"),
         ],
     },
+    {
+        "name": "AI support agent in travel and hospitality", "slug": "travel-and-hospitality-ai-support-agent",
+        "intro": "A generic support agent answering routine questions is one kind of system. A support agent answering questions for airline, hotel, or cruise customers sits inside cancellation policies, change fees, and disruption events that can reshape the entire ticket queue overnight, and that context changes what a resolution is actually worth.",
+        "bullets": [
+            "A question answered correctly the day before a storm grounds half the flight schedule says nothing about whether the agent can handle the flood of rebooking and refund requests that follow",
+            "Change fee and refund decisions carry a direct dollar cost, so an agent that waives a fee it should not have waived is not a clean resolution even if the customer leaves satisfied",
+            "Loyalty tier and membership status change what a correct answer even looks like for the same question, and a support agent that does not account for that will quietly give two different customers two different, and sometimes wrong, answers",
+        ],
+        "closing": "agentworth ties this combination's resolutions to the fee and refund outcome of each conversation and separates disruption driven spikes from a normal week, so the ROI case for a travel and hospitality support agent reflects what actually happened to the customer's booking, not just whether the chat ended.",
+        "related": [
+            ("/roi-for/travel-and-hospitality/", "AI agent ROI for Travel and hospitality"),
+            ("/use-cases/ai-support-agent/", "Proving ROI for an AI support agent"),
+            ("/glossary/ticket-volume-normalization/", "Ticket volume normalization"),
+            ("/glossary/cost-avoidance-vs-cost-savings/", "Cost avoidance vs cost savings"),
+        ],
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -951,6 +987,25 @@ FAQS = [
             ("/compare/vanity-metrics/", "agentworth vs Vanity metrics like tickets closed"),
         ],
         "meta": "A direct answer on whether AI agent ROI can be negative, why that can still be the honest number, and what it actually indicates about the program.",
+    },
+    {
+        "question": "Why does my AI agent show a high resolution rate but a bad ROI number?",
+        "slug": "high-resolution-rate-bad-roi",
+        "subhead": "Resolution rate measures activity. ROI measures what that activity was actually worth once every cost is counted.",
+        "body": """
+  <h2>Short answer</h2>
+  <p>A high resolution rate only counts how many conversations ended in a closed status. It says nothing about the cost of running the agent, the labor still spent reviewing escalations, or whether those resolutions actually held. An agent can close almost everything it touches and still produce a poor ROI number if what it costs to run, directly and in the human time still needed around it, outweighs the value of what it resolved.</p>
+  <h2>Where the gap usually comes from</h2>
+  <p>The most common cause is a cost side that got underweighted when the resolution rate was first reported. Model or platform usage costs that scale with volume, the time a human spends reviewing flagged or escalated cases, and the cost of resolutions that quietly came back as repeat contacts all belong on the cost side of the ledger, and a program that only tracks resolution rate usually has not been counting all three.</p>
+  <p>The fix is not to distrust the resolution rate itself, it is to stop treating it as a stand in for ROI. The two numbers answer different questions, one about how much the agent is doing and one about whether that activity is actually worth more than it costs, and a team that only tracks the first one has no way to notice when the second one turns negative.</p>
+""",
+        "related": [
+            ("/glossary/cost-per-resolution/", "Cost per resolution"),
+            ("/glossary/net-value-per-resolution/", "Net value per resolution"),
+            ("/compare/vanity-metrics/", "agentworth vs Vanity metrics like tickets closed"),
+            ("/glossary/resolution-verification/", "Resolution verification"),
+        ],
+        "meta": "A direct answer on why an AI agent can show a high resolution rate while its ROI number still looks poor, and what usually causes the gap.",
     },
 ]
 
