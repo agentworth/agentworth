@@ -8,3 +8,4 @@
 2026-10-27: the-reopened-ticket-problem-in-ai-agent-roi-claims
 2026-10-28: the-self-grading-problem-in-ai-agent-roi-reports
 2026-10-29: why-hours-saved-and-dollars-saved-are-not-the-same-number
+2026-10-30: what-a-trustworthy-ai-agent-audit-log-actually-needs-to-record
